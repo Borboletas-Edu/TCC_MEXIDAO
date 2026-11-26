@@ -1,0 +1,14 @@
+/* Busca · 327×40 · r100 · fundo surfaceAlt · lupa e funil na cor primária (funil ativo = preenchido) */
+.busca { height: 40px; width: 100%; border-radius: var(--raio-pilula); background: var(--cor-surfaceAlt); border: 1px solid var(--cor-border); display: flex; align-items: center; gap: 10px; padding: 0 16px 0 14px; }
+.busca--alta { height: 48px; padding-left: 16px; }
+.busca__lupa { width: 18px; height: 18px; color: var(--cor-primary); flex: none; stroke-width: 2.1; }
+.busca__valor { flex: 1; font: 400 13px/20px var(--fonte-texto); color: var(--cor-text); }
+.busca--alta .busca__valor { font-size: 14px; line-height: 21px; }
+.busca__valor::placeholder { color: var(--cor-muted); }
+.busca__valor::-webkit-search-cancel-button { display: none; }
+.busca__funil { width: 20px; height: 20px; display: grid; place-items: center; color: var(--cor-primary); flex: none; }
+.busca__funil svg { width: 15px; height: 15px; stroke-width: 1.8; }
+.busca__funil--ativo svg { fill: var(--cor-primary); }
+.busca--readonly { cursor: pointer; }
+.busca--readonly .busca__valor { pointer-events: none; }
+.busca:focus-within { border-color: var(--cor-primary); }

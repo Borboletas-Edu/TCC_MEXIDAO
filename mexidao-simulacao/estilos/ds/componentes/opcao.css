@@ -1,0 +1,7 @@
+/* Opção com seletor · 327×48 · r100 · padding 0/16 · gap 12 · seletor 18 (borda primária 1.5) · Nunito Bold 13 */
+.opcao { height: 48px; width: 100%; border-radius: var(--raio-pilula); background: var(--cor-surface); border: 1px solid var(--cor-border); display: flex; align-items: center; gap: 12px; padding: 0 16px; font: 700 13px/18px var(--fonte-texto); color: var(--cor-text); transition: border-color .2s; }
+.opcao__seletor { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--cor-primary); display: grid; place-items: center; flex: none; }
+.opcao__marca { width: 10px; height: 10px; border-radius: 50%; background: var(--cor-primary); transform: scale(0); transition: transform .2s var(--curva); }
+.opcao--selecionada { border-color: var(--cor-primary); }
+.opcao--selecionada .opcao__marca { transform: scale(1); }
+.grupo-opcoes { display: flex; flex-direction: column; gap: 8px; }

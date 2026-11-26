@@ -1,0 +1,5 @@
+/* Etapa do método (cartão) · padding 16 · gap 12 · r16 · nome Elms ExtraBold 14/20 · instruções Nunito 14/21 apagada */
+.etapa-metodo { display: flex; gap: 12px; padding: 16px; background: var(--cor-surface); border: 1px solid var(--cor-border); border-radius: var(--raio-cartao); }
+.etapa-metodo__texto { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.etapa-metodo__nome { font: 800 14px/20px var(--fonte-titulo); color: var(--cor-text); }
+.etapa-metodo__instrucoes { font: 400 14px/21px var(--fonte-texto); color: var(--cor-muted); }

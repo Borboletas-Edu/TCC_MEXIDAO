@@ -1,0 +1,18 @@
+/* Conquista · selo 48 (44 no perfil) · Ativa verde clara / Bloqueada surfaceAlt com borda · rótulo Nunito 12 */
+.conquistas { display: grid; grid-template-columns: repeat(4, 72px); justify-content: space-between; }
+.conquistas--5 { grid-template-columns: repeat(5, 64px); }
+.conquista { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; }
+.conquista__selo { width: 48px; height: 48px; border-radius: 50%; background: var(--cor-surfaceAlt); border: 1px dashed var(--cor-border); display: grid; place-items: center; color: var(--cor-muted); }
+.conquistas--5 .conquista__selo { width: 44px; height: 44px; }
+.conquista__selo svg { width: 22px; height: 22px; }
+.conquista__rotulo { font: 400 12px/18px var(--fonte-texto); color: var(--cor-muted); }
+.conquista--ativa .conquista__selo { background: var(--cor-greenSoft); border-color: var(--cor-greenSoft); color: var(--cor-greenStrong); }
+.conquista--ativa .conquista__rotulo { color: var(--cor-text); }
+
+/* Conquista com ilustração (Figma 872:7987 · 1141:7592–7597) · imagem ~64×48 · bloqueada em cinza com cadeado */
+.conquista--ilustrada { gap: 4px; }
+.conquista__ilustracao { position: relative; width: 64px; height: 48px; display: grid; place-items: center; }
+.conquista__imagem { max-width: 64px; max-height: 48px; width: auto; height: auto; object-fit: contain; }
+.conquista--bloqueada .conquista__imagem { filter: grayscale(1); opacity: .45; }
+.conquista__cadeado { position: absolute; right: 2px; bottom: 0; width: 18px; height: 18px; border-radius: 50%; background: var(--cor-surface); border: 1px solid var(--cor-border); display: grid; place-items: center; color: var(--cor-muted); }
+.conquista__cadeado svg { width: 11px; height: 11px; }

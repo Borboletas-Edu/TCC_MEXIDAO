@@ -1,0 +1,89 @@
+/* Fluxo 9 · Perfil, configurações e ajuda */
+.botao-icone { width: 32px; height: 32px; display: grid; place-items: center; color: var(--cor-text); }
+.botao-icone svg { width: 22px; height: 22px; stroke-width: 1.9; }
+.botao__icone--18 { width: 18px !important; height: 18px !important; }
+
+/* Editar perfil */
+.editar { padding-top: 14px; gap: 16px; }
+.editar__foto { display: flex; align-items: center; gap: 16px; }
+.editar__acoes-foto { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.aparencias { display: grid; grid-template-columns: 159px 157px; gap: 11px; margin-top: 8px; }
+.aparencia { height: 110px; border-radius: 16px; background: var(--cor-surface); border: 1px solid var(--cor-border); padding: 9px; display: flex; flex-direction: column; align-items: center; gap: 8px; transition: border-color .2s; }
+.aparencia--ativa { border-color: var(--cor-primary); }
+.aparencia__amostra { width: 100%; height: 64px; border-radius: 10px; border: 1px solid var(--cor-border); background: var(--cor-background); }
+.aparencia__amostra--escuro { background: var(--cor-text); }
+.aparencia__rotulo { display: flex; align-items: center; gap: 4px; font: 700 13px/18px var(--fonte-texto); color: var(--cor-text); }
+.aparencia__rotulo svg { width: 14px; height: 14px; display: none; stroke-width: 2.6; }
+.aparencia--ativa .aparencia__rotulo { color: var(--cor-greenStrong); }
+.aparencia--ativa .aparencia__rotulo svg { display: block; }
+
+/* Configurações */
+.configuracoes { padding-top: 14px; }
+.configuracoes .lista { flex: none; }
+.configuracoes__aviso:not(:empty) { margin-bottom: 16px; }
+
+/* Contas vinculadas */
+.contas-vinculadas { padding-top: 14px; }
+.contas { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
+.conta { padding: 16px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px; transition: opacity .3s, transform .3s; }
+.conta.removendo { opacity: 0; transform: translateX(40px); }
+.conta__topo { display: flex; align-items: center; gap: 12px; width: 100%; }
+.conta__simbolo { width: 44px; height: 44px; border-radius: 50%; background: var(--cor-surfaceAlt); display: grid; place-items: center; color: var(--cor-text); flex: none; }
+.conta__simbolo svg { width: 22px; height: 22px; }
+.selo-status { height: 24px; display: inline-flex; align-items: center; gap: 4px; padding: 0 10px; border-radius: var(--raio-pilula); background: var(--cor-background); font: 700 12px/18px var(--fonte-texto); color: var(--cor-greenStrong); }
+.selo-status svg { width: 12px; height: 12px; stroke-width: 3; }
+.conta__email { width: 100%; height: 40px; border-radius: 12px; background: var(--cor-surfaceAlt); display: flex; align-items: center; gap: 8px; padding: 0 12px; font: 400 13px/20px var(--fonte-texto); color: var(--cor-text); }
+.conta__email svg { width: 16px; height: 16px; color: var(--cor-muted); }
+.outras-redes { padding: 14px; display: flex; }
+.outras-redes__texto { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; }
+.outras-redes__redes { display: flex; gap: 6px; margin-top: 6px; }
+.outras-redes__rede { width: 34px; height: 34px; border-radius: 50%; background: var(--cor-surfaceAlt); display: grid; place-items: center; color: var(--cor-text); transition: transform .15s; }
+.outras-redes__rede:active { transform: scale(.9); }
+.outras-redes__rede svg { width: 16px; height: 16px; }
+.contas__nota { margin-top: 12px; }
+
+.restricoes { padding-top: 14px; gap: 16px; }
+
+/* Notificações */
+.notificacoes { padding-top: 14px; }
+.notificacoes__lista { margin-top: 16px; flex: none; }
+.preferencia { min-height: 62px; display: flex; align-items: center; gap: 12px; padding: 12px 14px; }
+.preferencia__icone { width: 36px; height: 36px; border-radius: 50%; background: var(--cor-surfaceAlt); color: var(--cor-primary); display: grid; place-items: center; flex: none; }
+.preferencia__icone svg { width: 18px; height: 18px; }
+.permissoes { margin-top: 16px; display: flex; gap: 12px; align-items: flex-start; flex: none; }
+.permissoes__icone { width: 20px; height: 20px; color: var(--cor-text); flex: none; }
+.permissoes .txt-apoio { margin-top: 4px; }
+
+/* Central de ajuda */
+.central-ajuda { padding-top: 14px; gap: 16px; }
+.ajuda-cartao { display: flex; flex-direction: column; gap: 12px; flex: none; }
+.ajuda-cartao__topo { display: flex; align-items: center; gap: 12px; }
+.ajuda-cartao__icone { width: 32px; height: 32px; border-radius: 50%; background: var(--cor-surfaceAlt); color: var(--cor-primary); display: grid; place-items: center; flex: none; }
+.ajuda-cartao__icone svg { width: 18px; height: 18px; }
+.ajuda-cartao__icone--36 { width: 36px; height: 36px; }
+.central-ajuda .ajuda-ia { border: 1px solid var(--cor-border); pointer-events: none; }
+
+/* Contato */
+.contato { padding-top: 14px; gap: 14px; }
+.painel-assunto .painel-inferior__titulo { margin-top: 2px; margin-bottom: 22px; }
+
+/* Sobre */
+.sobre { padding-top: 12px; gap: 16px; }
+.sobre__apresentacao { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 16px; flex: none; }
+.sobre__mascote { width: 84px; height: 70px; object-fit: contain; margin: 16px 0 8px; animation: respira 2.6s ease-in-out infinite; } /* Figma: 84×70 em y 188 */
+.tag--versao { height: 24px; padding: 3px 10px; background: var(--cor-surfaceAlt); font: 700 12px/18px var(--fonte-texto); color: var(--cor-muted); }
+.sobre__resumo { display: flex; gap: 12px; align-items: flex-start; flex: none; }
+.sobre__resumo .txt-apoio { margin-top: 4px; }
+
+/* Termos e Política */
+.documento-tela { padding-top: 14px; }
+.documento { margin-top: 14px; flex: none; }
+.documento__secao { padding: 12px 16px; display: flex; flex-direction: column; gap: 6px; }
+.documento__titulo { display: flex; align-items: center; gap: 10px; font: 700 13px/18px var(--fonte-texto); color: var(--cor-text); }
+.documento__numero { width: 22px; height: 22px; border-radius: 50%; background: var(--cor-primary); color: var(--cor-white); display: grid; place-items: center; font: 700 11px/1 var(--fonte-texto); flex: none; }
+
+/* Conexões */
+.conexoes { padding-top: 14px; gap: 12px; }
+.conexoes .abas--soltas { grid-auto-columns: 160px; gap: 7px; flex: none; }
+.conexoes .abas--soltas .aba { border: 0; }
+.conexoes__lista { flex: none; }

@@ -1,0 +1,7 @@
+/* Navegação principal · área 100 (fundo background) · barra 327×56 r100 padding 8/20 · destinos 40 · ativo primário */
+.area-navegacao { position: absolute; left: 0; right: 0; bottom: 0; height: 100px; z-index: 5; background: var(--cor-background); display: flex; justify-content: center; padding-top: 12px; }
+.navegacao { width: 327px; height: 56px; border-radius: var(--raio-pilula); background: var(--cor-surface); border: 1px solid var(--cor-border); display: flex; align-items: center; justify-content: space-between; padding: 8px 20px; }
+.navegacao__destino { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; color: var(--cor-muted); transition: background-color .25s, color .25s, transform .15s; }
+.navegacao__destino svg { width: 22px; height: 22px; stroke-width: 2.3; }
+.navegacao__destino--ativo { background: var(--cor-primary); color: var(--cor-white); }
+.navegacao__destino:active { transform: scale(.9); }

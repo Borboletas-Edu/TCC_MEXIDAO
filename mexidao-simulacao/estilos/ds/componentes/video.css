@@ -1,0 +1,45 @@
+/* Vídeo (elemento nativo <video> com controles do DS) — Tocar e pausar · Controle do vídeo · Linha do tempo · Player */
+.video { position: relative; width: 100%; height: 230px; border-radius: var(--raio-cartao); overflow: hidden; background: var(--cor-text); }
+.video__midia { width: 100%; height: 100%; object-fit: cover; display: block; }
+.video__tocar { position: absolute; left: 50%; top: 50%; margin: -22px 0 0 -22px; }
+.video--tocando .video__tocar { opacity: 0; pointer-events: none; }
+.video--tocando:hover .video__tocar { opacity: .9; pointer-events: auto; }
+.video__controles { position: absolute; top: 11px; right: 12px; display: flex; gap: 8px; }
+.video__duracao { position: absolute; right: 12px; bottom: 12px; height: 22px; padding: 2px 8px; border-radius: var(--raio-pilula); background: var(--cor-text); color: var(--cor-white); font: 400 12px/18px var(--fonte-texto); font-variant-numeric: tabular-nums; }
+.video__progresso { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: rgba(255, 255, 255, .35); }
+.video__progresso-barra { height: 100%; width: 0; background: var(--cor-primary); }
+/* Tocar e pausar · 44 · círculo primário */
+.tocar-pausar { width: 44px; height: 44px; border-radius: 50%; background: var(--cor-primary); color: var(--cor-white); display: grid; place-items: center; flex: none; transition: transform .15s, opacity .25s; }
+.tocar-pausar:active { transform: scale(.92); }
+.tocar-pausar svg { width: 18px; height: 18px; }
+/* Controle do vídeo · 32 · fundo text */
+.controle-video { width: 32px; height: 32px; border-radius: 50%; background: rgba(58, 64, 51, .82); color: var(--cor-white); display: grid; place-items: center; flex: none; }
+.controle-video svg { width: 18px; height: 18px; stroke-width: 2; }
+/* Linha do tempo · trilho 6 r3 · marcador 14 · tempos Nunito 12 */
+.linha-tempo { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.linha-tempo__trilho { position: relative; height: 14px; cursor: pointer; }
+.linha-tempo__total { position: absolute; left: 0; right: 0; top: 4px; height: 6px; border-radius: 3px; background: var(--cor-border); }
+.linha-tempo__assistido { position: absolute; left: 0; top: 4px; height: 6px; border-radius: 3px; background: var(--cor-primary); width: 0; }
+.linha-tempo__marcador { position: absolute; top: 0; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: var(--cor-primary); border: 2px solid var(--cor-white); left: 0; }
+.linha-tempo__tempos { display: flex; justify-content: space-between; font: 400 12px/18px var(--fonte-texto); color: var(--cor-muted); font-variant-numeric: tabular-nums; }
+.linha-tempo__atual { font-weight: 700; color: var(--cor-text); }
+.linha-tempo--escura .linha-tempo__total { background: var(--cor-white); }
+.linha-tempo--escura .linha-tempo__tempos, .linha-tempo--escura .linha-tempo__atual { color: var(--cor-white); }
+/* Player de vídeo (modal) · 327 · padding 12 · gap 12 · r20 */
+.player { width: 327px; display: flex; flex-direction: column; gap: 12px; padding: 12px; background: var(--cor-surface); border-radius: 20px; animation: toast-entra .3s var(--curva); }
+.player__topo { display: flex; align-items: center; justify-content: space-between; padding: 0 4px; }
+.player__fechar { width: 24px; height: 24px; display: grid; place-items: center; color: var(--cor-text); }
+.player__fechar svg { width: 20px; height: 20px; stroke-width: 2.3; }
+.player__video { position: relative; height: 300px; border-radius: var(--raio-imagem); overflow: hidden; background: var(--cor-text); }
+.player__controles { display: flex; align-items: center; gap: 12px; }
+/* Player · tela cheia */
+.player-cheio { position: absolute; inset: 0; background: #000; }
+.player-cheio .video__midia { position: absolute; inset: 0; }
+.player-cheio__topo { position: absolute; left: 16px; top: 46px; height: 42px; display: flex; align-items: center; gap: 16px; padding: 10px 16px; border-radius: var(--raio-pilula); background: rgba(58, 64, 51, .85); color: var(--cor-white); }
+.player-cheio__topo svg { width: 20px; height: 20px; stroke-width: 2.3; }
+.player-cheio__controles { position: absolute; left: 16px; right: 16px; bottom: 28px; display: flex; align-items: center; gap: 16px; padding: 12px; border-radius: 20px; background: rgba(58, 64, 51, .85); }
+/* Vídeo do YouTube (player oficial incorporado: os controles são os do YouTube) */
+.video__youtube { border: 0; width: 100%; height: 100%; display: block; background: #000; }
+.video--youtube { background: #000; }
+.player--youtube .player__video { background: #000; }
+.player-cheio--youtube .video__youtube { position: absolute; left: 0; right: 0; top: 96px; height: calc(100% - 192px); }

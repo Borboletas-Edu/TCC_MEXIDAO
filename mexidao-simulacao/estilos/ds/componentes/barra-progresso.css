@@ -1,0 +1,4 @@
+/* Barra de progresso / XP · 6 · r100 · fundo border · preenchimento verde */
+.barra-progresso { height: 6px; border-radius: var(--raio-pilula); background: var(--cor-border); overflow: hidden; }
+.barra-progresso--grossa { height: 9px; border-radius: 10px; background: var(--cor-background); }
+.barra-progresso__preenchimento { height: 100%; width: 0; border-radius: inherit; background: var(--cor-green); transition: width 1.2s var(--curva); }

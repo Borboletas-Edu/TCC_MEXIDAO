@@ -1,0 +1,23 @@
+/* Estrutura de tela (frame 375×812): status · cabeçalho · corpo rolável · rodapé de ações */
+.tela { position: absolute; inset: 0; background: var(--cor-background); display: flex; flex-direction: column; overflow: hidden; isolation: isolate; }
+.tela__status { height: var(--status-a); flex: none; }
+.tela__corpo { flex: 1; min-height: 0; overflow-y: auto; overflow-x: hidden; padding: 24px var(--margem) 24px; display: flex; flex-direction: column; scrollbar-width: none; position: relative; }
+.tela__corpo::-webkit-scrollbar { display: none; }
+/* Nada dentro do corpo encolhe quando o conteúdo passa da altura da tela (a rolagem cuida disso) */
+.tela__corpo > *, .preparo__etapa > *, .fase__conteudo > * { flex-shrink: 0; }
+.tela__corpo--colado { padding-top: 0; }
+.tela__corpo--sem-margem { padding-left: 0; padding-right: 0; }
+.tela__rodape { flex: none; padding: 16px var(--margem) 40px; display: flex; flex-direction: column; gap: 16px; position: relative; z-index: 2; }
+.tela__rodape--simples { padding-bottom: 56px; }
+.tela--com-navegacao .tela__corpo { padding-bottom: 116px; }
+.ondas { position: absolute; left: 0; top: 0; width: 375px; height: 812px; pointer-events: none; z-index: -1; overflow: visible; }
+
+/* Fundos ilustrados do Figma (imagens de fundo das telas 375×812) · a = Splash/Home · b = Inicial/Login/Preparo/Trilha · c = Busca/Filtros/Comunidade */
+.tela--fundo-a, .tela--fundo-b, .tela--fundo-c { background-size: 375px 812px; background-position: 0 0; background-repeat: no-repeat; }
+.tela--fundo-a { background-image: url("../../../midia/fundos/folhas-a.jpg"); }
+.tela--fundo-b { background-image: url("../../../midia/fundos/folhas-b.jpg"); }
+.tela--fundo-c { background-image: url("../../../midia/fundos/folhas-c.jpg"); }
+
+/* Folhas do fundo por cima de vídeos/ilustrações opacas (o fundo do vídeo não cobre as folhas) */
+.fundo-frente { position: absolute; left: 0; top: 0; width: 375px; height: 812px; pointer-events: none; z-index: 3; background-size: 375px 812px; background-repeat: no-repeat; }
+.fundo-frente--b { background-image: url("../../../midia/fundos/folhas-b-frente.png"); }

@@ -1,0 +1,24 @@
+/* Fluxo 2 · Onboarding e preferências */
+.passos-onboarding { list-style: none; display: flex; flex-direction: column; gap: 13px; margin-top: 16px; }
+.passo-onboarding { display: flex; align-items: flex-start; gap: 12px; min-height: 63px; padding: 10px 14px; background: var(--cor-surface); border-radius: 7px; }
+.passo-onboarding .marcador-etapa { margin-top: 6px; }
+.passo-onboarding__texto { display: flex; flex-direction: column; gap: 4px; }
+
+/* Painel de restrições (Painel inferior com busca) */
+.painel-restricoes__chips { gap: 8px; margin-top: 24px; }
+.painel-restricoes__vazio { margin-top: 24px; }
+
+.conectar { gap: 20px; }
+.conectar .grupo-opcoes { margin-top: -1px; }
+.conectar__nota { margin-top: 3px; }
+
+/* Ilustrações de conexão: mesma escala (260 px de largura) e mesma base nas duas telas */
+.ilustracao-conexao { display: block; width: 260px; height: 115px; object-fit: contain; margin: 35px auto 0; }
+.ilustracao-conexao--selo { height: 161px; margin-top: -11px; }
+.autorizar .faixa-servico { margin-top: 38px; } /* Figma: faixa em y 298 */
+.faixa-servico { display: grid; place-items: center; height: 33px; margin-top: 36px; border-radius: var(--raio-pilula); background: var(--cor-green); border: 1px solid var(--cor-border); font: 700 13px/18px var(--fonte-texto); color: var(--cor-text); }
+.autorizar .introducao { margin-top: 24px; }
+.autorizar .mensagem-estado { margin-top: 13px; }
+
+.autorizada .introducao { margin-top: 96px; } /* Figma 872:5243: título em y 356 */
+.autorizada .mensagem-estado { margin-top: 24px; }

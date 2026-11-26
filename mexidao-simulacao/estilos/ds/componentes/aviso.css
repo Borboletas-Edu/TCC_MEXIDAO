@@ -1,0 +1,13 @@
+/* Avisos · sucesso (surface, texto verde) · informativo (surfaceAlt, texto apagado) · toast flutuante */
+.aviso { display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; background: var(--cor-surface); font: 700 13px/18px var(--fonte-texto); color: var(--cor-greenStrong); }
+.aviso__icone { width: 18px; height: 18px; flex: none; stroke-width: 2.4; }
+.aviso--info { align-items: flex-start; padding: 10px 12px; background: var(--cor-surfaceAlt); font: 400 12px/18px var(--fonte-texto); color: var(--cor-muted); }
+.aviso--info .aviso__icone { width: 16px; height: 16px; margin-top: 1px; color: var(--cor-muted); }
+.aviso--nota { padding: 0; background: none; align-items: flex-start; font: 400 12px/18px var(--fonte-texto); color: var(--cor-muted); }
+.aviso--nota .aviso__icone { width: 16px; height: 16px; color: var(--cor-text); stroke-width: 2; margin-top: 1px; }
+.aviso--dica { align-items: flex-start; font: 400 12px/18px var(--fonte-texto); color: var(--cor-greenStrong); border: 1px solid var(--cor-border); }
+.aviso--dica .aviso__icone { width: 16px; height: 16px; }
+.aviso--em-criacao { border: 1.5px dashed var(--cor-primary); color: var(--cor-primary); background: transparent; font-size: 12px; }
+.toast { position: absolute; left: 24px; right: 24px; top: 58px; z-index: 40; display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 12px; background: var(--cor-surface); border: 1px solid var(--cor-border); box-shadow: 0 10px 24px rgba(58, 64, 51, .14); font: 700 13px/18px var(--fonte-texto); color: var(--cor-greenStrong); animation: toast-entra .35s cubic-bezier(.2, .9, .3, 1.2); }
+.toast svg { width: 16px; height: 16px; flex: none; stroke-width: 2.4; }
+.toast.saindo { animation: toast-sai .3s ease forwards; }

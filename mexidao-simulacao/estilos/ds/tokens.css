@@ -1,0 +1,60 @@
+/* ==========================================================================
+   DS · Tokens — espelho da coleção de variáveis "Caderno de cozinha · Interface"
+   e dos estilos de texto "Caderno de cozinha/…" do Figma (seção A · Design System).
+   Mudou no Figma? Mude aqui e o app inteiro acompanha.
+   ========================================================================== */
+:root {
+  /* Cores (nomes iguais às variáveis do Figma) */
+  --cor-background: #ecead1;
+  --cor-surface: #fbf7ef;
+  --cor-surfaceAlt: #f3f1e8;
+  --cor-text: #3a4033;
+  --cor-muted: #727362;
+  --cor-border: #e2dbcd;
+  --cor-primary: #d27a33;
+  --cor-primaryStrong: #ad5d1c;
+  --cor-primarySoft: #e3a663;
+  --cor-green: #97c064;
+  --cor-green2: #3f8c41;
+  --cor-greenMedium: #88af52;
+  --cor-greenStrong: #19632d;
+  --cor-greenSoft: #c8faac;
+  --cor-selected: #dfdda1;
+  --cor-timeMedium: #fae5ac;
+  --cor-timeLong: #fac1ac;
+  --cor-link: #ae4f35;
+  --cor-white: #ffffff;
+  --cor-overlay: rgba(58, 64, 51, 0.4);
+  --cor-avaliacoes: #ebd79e;
+  --cor-reservado: #d9d9d9;
+
+  /* Famílias */
+  --fonte-titulo: "Elms Sans", "Nunito", system-ui, sans-serif;
+  --fonte-texto: "Nunito", system-ui, sans-serif;
+  --fonte-sistema: "Inter", system-ui, sans-serif;
+
+  /* Grid: 8 colunas, margem 24, gutter 8 */
+  --margem: 24px;
+  --gutter: 8px;
+
+  /* Espaçamentos (múltiplos usados nas telas) */
+  --esp-4: 4px; --esp-6: 6px; --esp-8: 8px; --esp-12: 12px; --esp-16: 16px;
+  --esp-20: 20px; --esp-24: 24px; --esp-32: 32px; --esp-48: 48px;
+
+  /* Raios */
+  --raio-pilula: 100px;
+  --raio-cartao: 16px;
+  --raio-imagem: 12px;
+  --raio-contribuicao: 8px;
+  --raio-painel: 24px;
+
+  /* Medidas do aparelho (frames 375×812) */
+  --tela-l: 375px;
+  --tela-a: 812px;
+  --status-a: 36px;
+  --cabecalho-a: 50px;
+
+  /* Movimento */
+  --curva: cubic-bezier(.2, .8, .2, 1);
+  --dur-tela: 340ms;
+}

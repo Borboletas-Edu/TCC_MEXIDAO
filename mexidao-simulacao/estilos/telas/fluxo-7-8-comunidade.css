@@ -1,0 +1,92 @@
+/* Fluxos 7 e 8 · Comunidade (feed, postagem, perfis) e Conexões (busca, convite, seguidores) */
+.comunidade { padding-top: 14px; }
+.comunidade--feed { padding-top: 16px; }
+.comunidade__acoes { display: flex; align-items: center; gap: 8px; flex: none; }
+.comunidade__acoes .busca { flex: 1; }
+.botao-criar { width: 48px; height: 48px; border-radius: 50%; background: var(--cor-primary); color: var(--cor-white); display: grid; place-items: center; flex: none; transition: transform .15s; }
+.botao-criar svg { width: 22px; height: 22px; stroke-width: 2.4; }
+.botao-criar:active { transform: scale(.92); }
+.comunidade__aviso { margin-top: 16px; }
+.comunidade__aviso .aviso { height: 38px; border-radius: 12px; gap: 8px; }
+.lista-postagens { display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+.comunidade--feed .lista-postagens { margin-top: 0; }
+
+/* Postagem + comentários (painel inferior fixo sobre a postagem) */
+.postagem__fundo { padding-top: 14px; }
+.camada--comentarios { z-index: 6; }
+.comentarios { top: 246px; max-height: none; background: var(--cor-background); border-radius: 24px 24px 0 0; }
+.comentarios__lista { display: flex; flex-direction: column; gap: 16px; padding: 0 18px 16px 17px; }
+.comentarios__envio { flex: none; }
+
+/* Perfil (cartão, abas, galeria e atividade) */
+.perfil { padding-top: 14px; }
+.perfil-card { padding: 16px; display: flex; flex-direction: column; gap: 12px; flex: none; }
+.perfil-card__identificacao { display: flex; align-items: center; gap: 12px; }
+.perfil-card__dados { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.perfil-card__acao { flex: none; }
+.perfil-card__xp { display: flex; flex-direction: column; gap: 6px; }
+.perfil-card__bio { font: 400 13px/20px var(--fonte-texto); color: var(--cor-text); }
+.perfil-card__conexoes { display: flex; align-items: center; gap: 6px; font: 400 12px/18px var(--fonte-texto); color: var(--cor-muted); }
+.perfil-card__conexoes button { display: inline-flex; gap: 3px; color: var(--cor-greenStrong); }
+.perfil-card__conexoes b { color: var(--cor-text); }
+.perfil .abas-sublinhado { margin-top: 16px; flex: none; }
+.perfil__conteudo { margin-top: 16px; }
+.galeria { display: grid; grid-template-columns: repeat(3, 106px); gap: 4px 4.5px; }
+.galeria__item { width: 106px; height: 106px; border-radius: 8px; overflow: hidden; transition: transform .15s; }
+.galeria__item:active { transform: scale(.96); }
+.galeria__item img { width: 100%; height: 100%; object-fit: cover; }
+.numeros-perfil { height: 24px; display: flex; align-items: center; justify-content: space-around; }
+.numeros-perfil__item { display: flex; align-items: baseline; gap: 4px; }
+.numeros-perfil__item b { font: 800 17px/22px var(--fonte-titulo); color: var(--cor-text); }
+.numeros-perfil__item span { font: 400 12px/18px var(--fonte-texto); color: var(--cor-muted); }
+.numeros-perfil__divisoria { width: 1px; height: 24px; background: var(--cor-border); }
+.titulo-secao--perfil { margin-top: 16px; height: 18px; }
+.perfil .conquistas { margin-top: 16px; }
+.perfil__semana { margin-top: 16px; }
+.lista-atividades { margin-top: 16px; padding: 0; overflow: hidden; }
+.atividade-linha { height: 57px; display: flex; align-items: center; gap: 12px; padding: 0 12px; border-bottom: 1px solid var(--cor-border); }
+.atividade-linha:last-child { border-bottom: 0; }
+.atividade-linha__foto { width: 36px; height: 36px; border-radius: 10px; overflow: hidden; flex: none; }
+.atividade-linha__foto img { width: 100%; height: 100%; object-fit: cover; }
+.atividade-linha__icone { width: 36px; height: 36px; border-radius: 50%; background: var(--cor-greenSoft); color: var(--cor-greenStrong); display: grid; place-items: center; flex: none; }
+.atividade-linha__icone svg { width: 18px; height: 18px; }
+
+/* Buscar pessoas */
+.buscar { padding-top: 14px; gap: 16px; }
+.buscar__campo { gap: 16px; }
+.convite-cartao { padding: 16px; display: flex; flex-direction: column; gap: 6px; }
+.convite-cartao .botao { margin-top: 0; }
+.buscar__resultado { display: flex; flex-direction: column; }
+.buscar__rotulo { margin-top: 16px; }
+.buscar__rotulo--resultado { margin-top: 0; }
+.lista-pessoas { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+.nenhum { display: flex; flex-direction: column; }
+.nenhum__titulo { margin-top: 19px; text-align: center; } /* Figma 872:6492: 35 px abaixo do botão, sem ilustração */
+.nenhum__texto { margin-top: 6px; text-align: center; }
+.nenhum .convite-cartao { margin-top: 31px; }
+
+/* Convidar amigos */
+.convidar { padding-top: 10px; }
+.convidar__ilustracao { display: block; width: 236px; height: 163px; object-fit: contain; margin: 0 auto; transform-origin: 50% 100%; }
+.convidar__titulo { margin-top: 9px; }
+.convidar__texto { margin-top: 16px; }
+.convidar__link { margin-top: 16px; }
+.convidar .campo__valor { white-space: nowrap; }
+.convidar > .botao { margin-top: 16px; }
+.link-copiado { margin-top: 16px; padding: 12px 16px; display: flex; align-items: center; gap: 12px; }
+.link-copiado__icone { width: 32px; height: 32px; border-radius: 50%; background: var(--cor-surfaceAlt); color: var(--cor-greenStrong); display: grid; place-items: center; flex: none; }
+.link-copiado__icone svg { width: 18px; height: 18px; stroke-width: 2.6; }
+.compartilhar { margin-top: 16px; padding: 16px; display: flex; flex-direction: column; gap: 16px; }
+.compartilhar__canais { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.compartilhar__canal { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.compartilhar__icone { width: 48px; height: 48px; border-radius: 50%; background: var(--cor-primarySoft); color: var(--cor-white); display: grid; place-items: center; transition: transform .15s; }
+.compartilhar__canal:active .compartilhar__icone { transform: scale(.92); }
+.compartilhar__icone svg { width: 22px; height: 22px; }
+
+/* Meu perfil com duas publicações (Figma 872:8149): 161,5×106 · gap 4 */
+.galeria--duas { grid-template-columns: repeat(2, 161.5px); gap: 4px; }
+.galeria--duas .galeria__item { width: 161.5px; height: 106px; }
+/* Cartão do perfil: nome e botão sem espaçamento extra de letras (cabem lado a lado como no Figma) */
+.perfil-card .txt-cabecalho, .perfil-card__acao, .perfil-card__acao .botao__rotulo { letter-spacing: 0; word-spacing: 0; }
+.perfil-card__dados .txt-cabecalho { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.perfil-card__acao.botao--compacto { padding-left: 14px; padding-right: 14px; }

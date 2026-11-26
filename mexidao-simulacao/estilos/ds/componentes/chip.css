@@ -1,0 +1,11 @@
+/* Chip · 36 · padding 9/16 · gap 6 · Nunito Bold 13/18 · Padrão / Selecionado (verde) */
+.chip { height: 36px; padding: 0 16px; border-radius: var(--raio-pilula); background: var(--cor-surface); border: 1px solid var(--cor-border); display: inline-flex; align-items: center; justify-content: center; gap: 6px; font: 700 13px/18px var(--fonte-texto); color: var(--cor-text); white-space: nowrap; transition: background-color .2s, color .2s, border-color .2s, transform .12s; flex: none; }
+.chip:active { transform: scale(.95); }
+.chip--selecionado { background: var(--cor-green); border-color: var(--cor-green); color: var(--cor-greenStrong); }
+.chip--alto { height: 38px; }
+.chip__icone { width: 14px; height: 14px; }
+.grupo-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.grupo-chips--compacto { gap: 6px; }
+.grupo-chips--grade2 { display: grid; grid-template-columns: 160px 160px; gap: 8px 7px; }
+.grupo-chips--grade3 { display: grid; grid-template-columns: repeat(3, 106px); gap: 8px 4px; }
+.grupo-chips--grade2 .chip, .grupo-chips--grade3 .chip { width: 100%; padding: 0 8px; }

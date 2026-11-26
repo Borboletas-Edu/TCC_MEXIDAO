@@ -1,0 +1,9 @@
+/* Estrelas de avaliação · grande 24×22 (gap 11) · pequena 11×10 (gap 5) · cor primária */
+.estrelas { display: flex; gap: 11px; color: var(--cor-primary); }
+.estrelas--p { gap: 5px; }
+.estrela { width: 24px; height: 22px; flex: none; transition: transform .15s; }
+.estrelas--p .estrela { width: 11px; height: 10px; }
+.estrela svg { width: 100%; height: 100%; overflow: visible; }
+.estrela--cheia svg path { fill: currentColor; }
+.estrelas--interativas .estrela { cursor: pointer; }
+.estrelas--interativas .estrela:active { transform: scale(1.25); }

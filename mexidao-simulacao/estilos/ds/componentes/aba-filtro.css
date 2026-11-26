@@ -1,0 +1,7 @@
+/* Painel de filtros · r11 · fundo surfaceAlt · abas à esquerda (Aba do filtro) · divisória · indicador primário · opções em chips */
+.painel-filtros { position: relative; display: grid; grid-template-columns: 121px 1fr; background: var(--cor-surfaceAlt); border: 1px solid var(--cor-border); border-radius: 11px; padding: 12px 0 12px 15px; min-height: 304px; }
+.painel-filtros__abas { position: relative; display: flex; flex-direction: column; border-right: 2px solid var(--cor-border); margin: 0 0 0 0; padding-top: 4px; }
+.painel-filtros__indicador { position: absolute; right: -2px; top: 7px; width: 3px; height: 28px; border-radius: 2px; background: var(--cor-primary); transition: transform .3s var(--curva); }
+.painel-filtros__opcoes { padding: 8px 12px 0 12px; display: flex; flex-wrap: wrap; align-content: flex-start; gap: 6px 6px; }
+.aba-filtro { height: 40px; display: flex; align-items: center; font: 400 13px/20px var(--fonte-texto); color: var(--cor-muted); white-space: nowrap; }
+.aba-filtro--ativa { font-weight: 700; line-height: 18px; color: var(--cor-text); }

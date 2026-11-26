@@ -1,0 +1,18 @@
+/* Campo de texto · rótulo Nunito Bold 13/18 · entrada 48 r100 padding 0/20 · Padrão / Foco / Preenchido */
+.campo { display: flex; flex-direction: column; gap: 8px; }
+.campo__rotulo { font: 700 13px/18px var(--fonte-texto); color: var(--cor-text); }
+.campo__entrada { height: 48px; border-radius: var(--raio-pilula); background: var(--cor-surface); border: 1px solid var(--cor-border); display: flex; align-items: center; gap: 8px; padding: 0 20px; transition: border-color .2s, box-shadow .2s; }
+.campo__entrada:focus-within { border-color: var(--cor-primary); box-shadow: 0 0 0 .5px var(--cor-primary); }
+.campo__valor { flex: 1; font: 400 14px/21px var(--fonte-texto); color: var(--cor-text); caret-color: var(--cor-primary); }
+.campo__valor::placeholder { color: var(--cor-muted); }
+.campo__acao { font: 400 12px/18px var(--fonte-texto); color: var(--cor-primary); flex: none; }
+.campo__ajuda { font: 400 12px/18px var(--fonte-texto); color: var(--cor-muted); }
+.campo__entrada--cinza { background: var(--cor-surfaceAlt); }
+/* Campo de várias linhas · entrada r16 padding 14/16 */
+.campo__entrada--multi { height: auto; min-height: 88px; border-radius: var(--raio-cartao); padding: 14px 16px; align-items: flex-start; }
+.campo__entrada--multi .campo__valor { resize: none; min-height: 60px; width: 100%; }
+/* Seletor (campo que abre painel) */
+.seletor { height: 48px; width: 100%; border-radius: var(--raio-pilula); background: var(--cor-surface); border: 1px solid var(--cor-border); display: flex; align-items: center; justify-content: space-between; padding: 0 20px; font: 400 14px/21px var(--fonte-texto); color: var(--cor-text); transition: border-color .2s; }
+.seletor--aberto { border-color: var(--cor-primary); box-shadow: 0 0 0 .5px var(--cor-primary); }
+.seletor__seta { width: 0; height: 0; border-left: 3.5px solid transparent; border-right: 3.5px solid transparent; border-top: 5px solid var(--cor-text); transition: transform .25s; }
+.seletor--aberto .seletor__seta { transform: rotate(180deg); }

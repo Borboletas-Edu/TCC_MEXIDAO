@@ -1,0 +1,10 @@
+/* Tag · 22 · padding 4/8 · gap 4 · Nunito ExtraBold 10/14 · Tempo curto/médio/longo, Custo $/$$/$$$, Categoria */
+.tag { height: 22px; padding: 4px 8px; border-radius: var(--raio-pilula); display: inline-flex; align-items: center; gap: 4px; font: 800 10px/14px var(--fonte-texto); color: var(--cor-text); background: var(--cor-background); white-space: nowrap; }
+.tag__icone { width: 11px; height: 11px; stroke-width: 2.3; }
+.tag--curto, .tag--custo-1 { background: var(--cor-greenSoft); }
+.tag--medio, .tag--custo-2 { background: var(--cor-timeMedium); }
+.tag--longo, .tag--custo-3 { background: var(--cor-timeLong); }
+.tag--categoria { background: var(--cor-background); }
+.tag--versao { height: 24px; padding: 3px 10px; background: var(--cor-surfaceAlt); font: 700 12px/18px var(--fonte-texto); color: var(--cor-muted); }
+.tag--autora { background: var(--cor-primarySoft); color: var(--cor-white); height: 18px; padding: 2px 7px; }
+.grupo-tags { display: flex; flex-wrap: wrap; gap: 6px; }

@@ -1,0 +1,14 @@
+/* Etapa do progresso · 76×24 · r10 · Concluída / Atual / Avançando / Final / Pendente */
+.progresso-etapas { overflow: visible; margin-right: calc(var(--margem) * -1); }
+.progresso-etapas__trilho { display: flex; gap: 8px; transition: transform .45s var(--curva); }
+.etapa-progresso { width: 76px; height: 24px; border-radius: 10px; background: var(--cor-border); flex: none; transition: background-color .35s; }
+.etapa-progresso--concluida { background: var(--cor-primarySoft); }
+.etapa-progresso--atual { background: var(--cor-primary); }
+.etapa-progresso--avancando { background: var(--cor-greenMedium); }
+.etapa-progresso--final { background: var(--cor-greenStrong); }
+.progresso-etapas--fino { margin-right: 0; }
+.progresso-etapas--fino .progresso-etapas__trilho { gap: 4px; }
+.progresso-etapas--fino .etapa-progresso { flex: 1; width: auto; height: 10px; }
+
+/* Passo a passo (Figma 872:5689): etapa atual em laranja claro */
+.progresso-etapas:not(.progresso-etapas--fino) .etapa-progresso--atual { background: var(--cor-primarySoft); }

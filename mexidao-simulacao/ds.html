@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mexidão · Design system do app</title>
+  <script src="nucleo/bloqueio.js"></script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23d27a33'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:wght@500;700;800&family=Inter:wght@400;500;600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos/app.css">
+  <link rel="stylesheet" href="estilos/ds-documentacao.css">
+</head>
+<body class="ds-doc">
+  <section class="bloqueio" aria-label="Bloqueado para visualização em celulares">
+    <span class="bloqueio__icone" aria-hidden="true">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="13" y="5" width="20" height="36" rx="4"/><path d="M20 35h6"/></svg>
+      <span class="bloqueio__cadeado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+    </span>
+    <h1 class="bloqueio__titulo">Bloqueado para visualização em celulares</h1>
+    <p class="bloqueio__texto">Simulação criada e adaptada exclusivamente para visualização em desktop.</p>
+    <p class="bloqueio__apoio">Copie o link abaixo e abra no navegador do computador.</p>
+    <p class="bloqueio__link" data-link-pc></p>
+    <button type="button" class="botao botao--principal" data-copiar-link><span class="botao__rotulo">Copiar link</span></button>
+    <p class="bloqueio__copiado" data-copiado-pc role="status"></p>
+  </section>
+  <script>
+    (function () {
+      var url = location.href.split('#')[0];
+      document.querySelector('[data-link-pc]').textContent = url;
+      document.querySelector('[data-copiar-link]').addEventListener('click', function () {
+        var aviso = document.querySelector('[data-copiado-pc]');
+        var ok = function () { aviso.textContent = 'Link copiado!'; };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(ok, function () { aviso.textContent = url; });
+        else aviso.textContent = url;
+      });
+    })();
+  </script>
+  <header class="ds-doc__topo">
+    <div><h1>Design system do app</h1><p>Espelho da seção “A · Design System” do Figma. Cada bloco mostra o componente real usado nas telas, o arquivo JS que o gera e as classes CSS.</p></div>
+    <a class="ds-doc__voltar" href="index.html">← Voltar à simulação</a>
+  </header>
+  <nav class="ds-doc__menu" id="menu"></nav>
+  <main id="ds"></main>
+  <script type="module" src="ds.js"></script>
+</body>
+</html>

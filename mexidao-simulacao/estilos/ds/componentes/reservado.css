@@ -1,0 +1,5 @@
+/* Espaços reservados do Figma (Logo, Mascote, "vetor aqui", ilustração vetorizada) — mantidos como no Figma */
+.reservado { display: grid; place-items: center; text-align: center; font: 400 13px/20px var(--fonte-texto); color: var(--cor-muted); background: var(--cor-surface); border: 1px solid var(--cor-border); border-radius: 4px; }
+.reservado--vetor { width: 236px; height: 94px; margin: 0 auto; border: 0; border-radius: 0; background: var(--cor-border); font: 400 12px/20px var(--fonte-sistema); color: #000; }
+.reservado--ilustracao { width: 228px; height: 92px; margin: 0 auto; border: 0; border-radius: 15px; background: var(--cor-reservado); font: 700 13px/17px var(--fonte-texto); color: #000; padding: 0 34px; }
+.reservado--cinza { background: var(--cor-surfaceAlt); border-radius: 12px; font-size: 12px; }

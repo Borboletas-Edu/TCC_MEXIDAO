@@ -1,0 +1,57 @@
+/* Fluxo 6 · Trilha de aprendizado */
+.trilha { padding-top: 10px; }
+.trilha__subtitulo { margin-top: 4px; }
+.nivel-trilha { margin-top: 16px; padding: 15px 15px 14px; display: flex; flex-direction: column; gap: 8px; flex: none; }
+.nivel-trilha__topo { display: flex; align-items: center; gap: 10px; }
+.nivel-trilha__valor { width: 36px; height: 36px; border-radius: 50%; background: var(--cor-greenMedium); color: var(--cor-white); display: grid; place-items: center; font: 700 13px/18px var(--fonte-texto); flex: none; }
+.trilha__secao { margin-top: 19px; }
+.trilha__secao--conquistas { margin-top: 24px; }
+.atividades { display: flex; gap: 12px; margin: 16px -24px 0; padding: 0 24px; flex: none; overflow-y: visible; padding-top: 46px; margin-top: -30px; } /* espaço para a touca do cachorro sair pelo topo */
+.atividade-card { position: relative; flex: none; width: 159px; height: 263px; display: flex; flex-direction: column; justify-content: flex-end; gap: 0; padding: 4px 4px 0; border-radius: 16px; background: var(--cor-surface); border: 8px solid var(--cor-green); text-align: left; transition: transform .15s; }
+.atividade-card:active { transform: scale(.97); }
+.atividade-card .barra-progresso { margin-top: 4px; }
+.atividade-card__status { margin-top: 4px; color: var(--cor-greenStrong); }
+.atividade-card__ilustracao { position: absolute; left: 11px; top: 11px; width: 135px; height: 120px; border-radius: 10px; }
+.atividade-card--concluida { width: 156px; border: 6px solid var(--cor-primarySoft); padding: 0 5px 8px; }
+.atividade-card--concluida .atividade-card__ilustracao { left: -10px; top: -22px; width: 171px; height: 215px; }
+.atividade-card__mascote { width: 171px; height: 215px; object-fit: contain; transform-origin: 50% 100%; }
+.atividade-card--concluida .atividade-card__status { color: var(--cor-text); margin-top: 4px; }
+.atividade-card--concluida .barra-progresso { margin-top: 4px; }
+.atividade-card--bloqueada { border-color: var(--cor-muted); }
+.atividade-card--bloqueada .atividade-card__status { color: var(--cor-text); }
+/* Cartão "Aproveite os alimentos": cachorro do tamanho do modelo (239×242), saindo pelo topo do cartão (animação SVG) */
+.atividade-card__ilustracao--cachorro { left: -48px; top: -50px; width: 239px; height: 242px; z-index: 1; pointer-events: none; }
+.atividade-card__mascote--cachorro { display: block; width: 239px; height: 242px; }
+/* Cartões bloqueados (Figma 1141:8692 · Group 128/129): conteúdo em cinza + desfoque 3,1 px, véu #3D3D3D 31 % e cadeado 45×56 */
+.atividade-card--bloqueada { border-color: var(--cor-muted); }
+.atividade-card--bloqueada > :not(.atividade-card__veu):not(.atividade-card__cadeado) { filter: grayscale(1) blur(3.1px); }
+.atividade-card__ilustracao--bloqueada { border-radius: 0; }
+.atividade-card__ilustracao--bancada { left: -5px; top: -8px; width: 152px; height: 196px; }
+.atividade-card__ilustracao--corte { left: -8px; top: 11px; width: 158px; height: 183px; }
+.atividade-card__ilustracao--bloqueada .atividade-card__mascote { width: 100%; height: 100%; object-fit: contain; }
+.atividade-card__veu { position: absolute; inset: -8px; border-radius: 16px; background: rgba(61, 61, 61, .31); pointer-events: none; }
+.atividade-card__cadeado { position: absolute; left: 49px; top: 88px; width: 45px; height: 56px; object-fit: contain; filter: drop-shadow(0 4px 4.3px rgba(0, 0, 0, .54)); pointer-events: none; }
+.trilha .conquistas { margin-top: 16px; }
+
+/* Fases */
+.fase { padding-top: 10px; }
+.fase__conteudo { display: flex; flex-direction: column; }
+.fase__numero { margin-top: 14px; font: 700 12px/18px var(--fonte-texto); color: var(--cor-greenStrong); }
+.fase__titulo { margin-top: 2px; }
+.fase__video { margin-top: 14px; flex: none; }
+.fase__instrucao { margin-top: 14px; }
+.fase__lista { margin-top: 14px; padding: 0; overflow: hidden; }
+.fase__lista .item-lista--icone { border-bottom: 1px solid var(--cor-border); gap: 10px; }
+.fase__lista .item-lista--icone:last-child { border-bottom: 0; }
+.fase__extra { margin-top: 14px; }
+
+/* Atividade concluída */
+.atividade-concluida { justify-content: flex-start; gap: 0; padding-bottom: 0; }
+.atividade-concluida__animacao + h1 { margin-top: 31px; }
+.atividade-concluida .txt-apoio { margin-top: 2px; }
+.atividade-concluida__xp { margin-top: 12px; padding: 15px; display: flex; flex-direction: column; gap: 8px; }
+.atividade-concluida__conquista { margin-top: 12px; padding: 12px; display: flex; align-items: center; gap: 12px; }
+.atividade-concluida__selo { width: 40px; height: 40px; border-radius: 50%; background: var(--cor-surfaceAlt); color: var(--cor-greenStrong); display: grid; place-items: center; flex: none; }
+.atividade-concluida__selo svg { width: 20px; height: 20px; }
+.atividade-concluida__proxima { margin-top: 12px; padding: 15px; display: flex; align-items: center; justify-content: space-between; }
+.atividade-concluida__proxima svg { width: 18px; height: 18px; color: var(--cor-text); }

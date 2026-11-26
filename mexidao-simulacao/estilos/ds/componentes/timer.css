@@ -1,0 +1,7 @@
+/* Timer · 327×48 · r100 · Elms ExtraBold 14 · Parado (borda verde) / Em andamento (verde preenchido) */
+.timer { height: 48px; width: 100%; border-radius: var(--raio-pilula); display: flex; align-items: center; justify-content: center; gap: 6px; font: 800 14px/20px var(--fonte-titulo); font-variant-numeric: tabular-nums; transition: background-color .25s, color .25s, border-color .25s; border: 1px solid var(--cor-green2); background: var(--cor-surfaceAlt); color: var(--cor-green2); }
+.timer__icone { width: 16px; height: 16px; stroke-width: 2; flex: none; }
+.timer--andamento { background: var(--cor-green2); border-color: var(--cor-green2); color: var(--cor-surface); }
+.timer--pausado { background: var(--cor-surface); border-color: var(--cor-greenStrong); color: var(--cor-greenStrong); }
+.timer--fim { background: var(--cor-greenMedium); border-color: var(--cor-greenMedium); color: var(--cor-white); animation: tremer .5s ease 2; }
+@keyframes tremer { 0%,100% { transform: none; } 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }

@@ -1,0 +1,70 @@
+/* Fluxo 4 · Detalhes da receita, avaliações e adaptação */
+.detalhes { padding-left: 26px; padding-right: 22px; padding-top: 32px; }
+.detalhes__foto { width: 327px; height: 88px; border-radius: 8px; object-fit: cover; flex: none; }
+.detalhes__nome { margin-top: 19px; }
+.detalhes__resumo { margin-top: 12px; }
+.detalhes__porcoes { margin-top: 14px; }
+.detalhes .abas { margin-top: 15px; flex: none; }
+.detalhes__conteudo { margin-top: 17px; }
+.detalhes__rodape { padding-bottom: 53px; }
+.detalhes__descricao { padding: 0 6px; }
+.detalhes__tabela { margin-top: 15px; }
+.detalhes__tabela .lista-itens, .detalhes__tabela .lista-itens .item-lista { gap: 0; }
+.faixa-info { width: 100%; height: 36px; margin-top: 14px; display: flex; align-items: center; gap: 8px; padding: 0 18px; border-radius: var(--raio-pilula); background: var(--cor-surface); font: 700 12px/16px var(--fonte-titulo); color: var(--cor-text); }
+.faixa-info svg { width: 14px; height: 14px; color: var(--cor-primary); stroke-width: 2.2; }
+.faixa-info--acao { margin-top: 21px; }
+.faixa-info--acao .link-acao { margin-left: auto; }
+.detalhes__avaliacoes { display: flex; flex-direction: column; gap: 16px; margin-top: 17px; }
+
+/* Avaliações: faixa amarela com nota + lista sobreposta com cantos arredondados */
+.tela--avaliacoes { background: var(--cor-avaliacoes); }
+.avaliacoes__faixa { flex: none; }
+.avaliacoes__faixa .tela__status { background: var(--cor-background); }
+.avaliacoes__faixa .cabecalho { height: 64px; border-bottom-color: var(--cor-border); background: var(--cor-background); }
+.avaliacoes__nota { height: 120px; display: flex; flex-direction: column; align-items: center; gap: 19px; padding-top: 26px; }
+.avaliacoes__nota .estrela { width: 23px; height: 23px; }
+.avaliacoes__nota .estrelas { gap: 12px; }
+.avaliacoes__lista { margin-top: -12px; border-radius: 24px 24px 0 0; background: var(--cor-background); padding-top: 24px; }
+.avaliacoes__contribuicoes { display: flex; flex-direction: column; gap: 15px; margin-top: 15px; }
+.avaliacoes__acoes { display: flex; flex-direction: column; gap: 12px; margin-top: 41px; padding-bottom: 32px; }
+
+.adicionar-avaliacao { gap: 0; }
+.avaliar { display: flex; flex-direction: column; margin-top: 14px; }
+.avaliar__estrelas { margin-top: 18px; margin-left: 3px; }
+.avaliar__estrelas .estrela { width: 26px; height: 24px; }
+.avaliar__nota { margin-top: 20px; margin-left: 3px; }
+.adicionar-avaliacao > .campo { margin-top: 27px; }
+.adicionar-avaliacao .campo__entrada--multi { min-height: 94px; }
+.avaliar__foto { margin-top: 18px; }
+.adicionar-avaliacao .anexar-foto { margin-top: 14px; }
+.adicionar-avaliacao__rodape { padding-bottom: 107px; gap: 20px; }
+
+.lista-etapas { display: flex; flex-direction: column; gap: 8px; margin-top: 23px; }
+
+/* Escolha de adaptação: destaque amarelo com mascote + folha arredondada */
+.tela--escolha .cabecalho { position: relative; z-index: 2; background: var(--cor-background); }
+.escolha__destaque { position: absolute; left: 0; right: 0; top: 86px; height: 307px; background: var(--cor-selected); overflow: hidden; }
+.escolha__circulo { position: absolute; left: 38px; top: 14px; width: 300px; height: 300px; border-radius: 50%; background: var(--cor-primarySoft); }
+.escolha__mascote { position: absolute; left: 84px; top: 20px; width: 208px; height: 232px; object-fit: contain; }
+.escolha__folha { margin-top: 233px; border-radius: 27px 27px 0 0; background: var(--cor-background); padding-top: 39px; position: relative; z-index: 1; overflow: visible; }
+.tela--escolha .tela__rodape { background: var(--cor-background); }
+
+/* Adaptar receita */
+.adaptar__lista { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+.substituicoes { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 5px 0 8px; }
+.substituicoes__titulo { font: 800 14px/24px var(--fonte-texto); color: var(--cor-primary); }
+.substituicoes .grupo-chips--grade3 .chip { padding: 0 4px; }
+
+/* Carregamento */
+.carregamento { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; padding: 0 48px 80px; }
+.carregamento__mascote { width: 220px; height: auto; }
+.carregamento__texto { max-width: 200px; }
+/* Figma 872:6048: campo de foto tracejado 327×172, sem o link de exemplo */
+.adicionar-avaliacao .adicionar-foto { margin-top: 14px; height: 172px; flex: none; }
+.adicionar-avaliacao .adicionar-foto__exemplo { display: none; }
+/* Ritmo vertical do Figma 872:6048 */
+.adicionar-avaliacao { padding-bottom: 0; }
+.adicionar-avaliacao .avaliar__nota { margin-top: 10px; }
+.adicionar-avaliacao > .campo { margin-top: 22px; }
+.adicionar-avaliacao .campo__entrada--multi { min-height: 76px; height: 76px; }
+.adicionar-avaliacao__rodape { padding-top: 12px; }

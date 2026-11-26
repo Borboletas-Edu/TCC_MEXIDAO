@@ -1,0 +1,12 @@
+/* Item da lista · 327×29 · linha inferior · nome Nunito 14 · quantidade Nunito 14 apagada · seleção 12 (borda primária) */
+.lista-itens { display: flex; flex-direction: column; gap: 3px; }
+.item-lista { min-height: 29px; display: flex; align-items: center; gap: 10px; padding: 0 2px 4px; border-bottom: 1px solid var(--cor-border); font: 400 14px/21px var(--fonte-texto); color: var(--cor-text); width: 100%; text-align: left; }
+.item-lista__controle { width: 12px; height: 12px; border-radius: 50%; border: 1px solid var(--cor-primary); display: grid; place-items: center; flex: none; }
+.item-lista__controle::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--cor-primary); transform: scale(0); transition: transform .2s var(--curva); }
+.item-lista__nome { flex: 1; min-width: 0; }
+.item-lista__qtd { color: var(--cor-muted); text-align: right; white-space: nowrap; }
+.item-lista--marcado .item-lista__controle { border-width: 1.5px; }
+.item-lista--marcado .item-lista__controle::after { transform: scale(1); }
+.item-lista--marcado .item-lista__nome { color: var(--cor-muted); text-decoration: line-through; }
+.item-lista--icone { border: 0; padding: 8px 14px; min-height: 34px; }
+.item-lista__icone { width: 16px; height: 16px; color: var(--cor-greenStrong); flex: none; }

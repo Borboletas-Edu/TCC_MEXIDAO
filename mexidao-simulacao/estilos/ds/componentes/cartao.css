@@ -1,0 +1,8 @@
+/* Cartão · surface · borda · r16 · padding 16 */
+.cartao { background: var(--cor-surface); border: 1px solid var(--cor-border); border-radius: var(--raio-cartao); padding: 16px; }
+.cartao--sem-borda { border-color: transparent; }
+.cartao--destaque { border-color: var(--cor-primary); padding: 17px; }
+.cartao--cinza { background: var(--cor-surfaceAlt); border-color: transparent; }
+.cartao--branco { background: var(--cor-white); border-color: transparent; border-radius: 10px; }
+.cartao--clicavel { transition: transform .12s; cursor: pointer; text-align: left; width: 100%; }
+.cartao--clicavel:active { transform: scale(.98); }

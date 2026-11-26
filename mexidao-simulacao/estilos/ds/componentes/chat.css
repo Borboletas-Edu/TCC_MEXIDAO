@@ -1,0 +1,71 @@
+/* Chat — Identidade da IA · Ícone da IA · Balão de chat · Sugestões · Barra de envio */
+/* Ícone da IA: avatar dos mascotes sobre o círculo laranja-claro (a arte passa um pouco da borda, como no Figma) */
+.icone-ia { position: relative; width: 22px; height: 22px; flex: none; display: block; }
+.icone-ia__arte { position: absolute; left: -6.5px; top: -1px; width: 35px; height: 25px; max-width: none; }
+.icone-ia--g { width: 44px; height: 44px; }
+.icone-ia--g .icone-ia__arte { left: -13px; top: -2px; width: 70px; height: 50px; }
+.ajuda-ia { width: 32px; height: 32px; border-radius: 50%; background: var(--cor-surface); display: grid; place-items: center; position: relative; flex: none; }
+.ajuda-ia--destaque::after { content: ""; position: absolute; inset: -5px; border-radius: 50%; border: 1px solid var(--cor-greenMedium); animation: respira 1.6s infinite; }
+.identidade-ia { height: 64px; flex: none; display: flex; align-items: center; gap: 12px; padding: 0 var(--margem); background: var(--cor-surface); border-bottom: 1px solid var(--cor-border); }
+.identidade-ia__imagem { width: 44px; height: 44px; display: grid; place-items: center; flex: none; }
+.identidade-ia__dados { display: flex; flex-direction: column; gap: 2px; }
+.identidade-ia__status { display: flex; align-items: center; gap: 6px; font: 400 12px/18px var(--fonte-texto); color: var(--cor-muted); }
+.identidade-ia__online { width: 8px; height: 8px; border-radius: 50%; background: var(--cor-greenMedium); }
+.chat__mensagens { flex: 1; min-height: 0; overflow-y: auto; padding: 24px var(--margem) 16px; display: flex; flex-direction: column; gap: 10px; scrollbar-width: none; }
+.chat__mensagens::-webkit-scrollbar { display: none; }
+.chat__vazio { display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 43px; }
+.chat__imagem { width: 140px; height: 140px; border-radius: 50%; background: var(--cor-surface); border: 1px solid var(--cor-border); display: grid; place-items: center; overflow: hidden; margin-bottom: 17px; }
+.chat__imagem img { width: 128px; height: auto; }
+.chat__imagem--mascotes { width: 284px; height: 207px; border: 0; border-radius: 0; background: none; overflow: visible; margin-bottom: 0; }
+.chat__imagem--mascotes .ilustracao { width: 284px; height: 207px; }
+.chat__sugestoes-vazio { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 17px; }
+.mensagem { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; animation: toast-entra .3s ease; }
+.mensagem--voce { align-items: flex-end; }
+.balao-chat { max-width: 260px; padding: 12px; border-radius: 16px; display: block; }
+.balao-chat--voce { background: var(--cor-green); border-radius: 16px 16px 4px 16px; font: 700 13px/18px var(--fonte-texto); color: var(--cor-text); }
+.balao-chat--assistente { background: var(--cor-surface); border: 1px solid var(--cor-border); border-radius: 16px 16px 16px 4px; font: 400 13px/20px var(--fonte-texto); color: var(--cor-muted); }
+.balao-chat--assistente b { font-weight: 700; color: var(--cor-text); }
+.balao-chat--video { display: block; width: 260px; padding: 10px; }
+.balao-chat__video { display: block; position: relative; height: 95px; border-radius: 11px; overflow: hidden; }
+.balao-chat__video img { width: 100%; height: 100%; object-fit: cover; }
+.balao-chat__video .tocar-pausar { position: absolute; left: 50%; top: 50%; margin: -18px 0 0 -18px; width: 36px; height: 36px; }
+.balao-chat--foto { padding: 4px; }
+.balao-chat--foto img { border-radius: 12px; max-height: 170px; }
+.balao-chat--audio { display: flex; flex-direction: row; align-items: center; gap: 8px; }
+.balao-chat--audio svg { width: 14px; height: 14px; }
+.balao-chat--digitando { display: flex; width: max-content; flex-direction: row; gap: 4px; padding: 14px 16px; }
+.balao-chat--digitando i { width: 6px; height: 6px; border-radius: 50%; background: var(--cor-muted); animation: ponto 1.1s infinite ease-in-out; }
+.balao-chat--digitando i:nth-child(2) { animation-delay: .15s; } .balao-chat--digitando i:nth-child(3) { animation-delay: .3s; }
+.mensagem__hora { font: 400 12px/18px var(--fonte-texto); color: var(--cor-muted); }
+.sugestoes { position: relative; flex: none; display: flex; gap: 8px; padding: 8px 16px 14px; overflow-x: auto; scrollbar-width: none; }
+.sugestoes::-webkit-scrollbar { display: none; }
+.chat__rodape::before { content: ""; position: absolute; left: 0; right: 0; top: -40px; z-index: 1; height: 60px; height: 40px; background: linear-gradient(rgba(236, 234, 209, 0), var(--cor-background)); pointer-events: none; }
+.chat__rodape { flex: none; background: var(--cor-background); position: relative; }
+.barra-envio { height: 72px; display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: var(--cor-surface); border-top: 1px solid var(--cor-border); }
+.barra-envio__campo { flex: 1; min-width: 0; height: 48px; border-radius: var(--raio-pilula); background: var(--cor-background); border: 1px solid var(--cor-border); display: flex; align-items: center; padding: 0 14px 0 20px; position: relative; overflow: hidden; }
+.barra-envio__valor { flex: 1; font: 400 14px/21px var(--fonte-texto); color: var(--cor-text); caret-color: var(--cor-primary); }
+.barra-envio__valor::placeholder { color: var(--cor-muted); }
+.barra-envio__botao { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; color: var(--cor-surface); flex: none; transition: transform .15s; }
+.barra-envio__botao:active { transform: scale(.92); }
+.barra-envio__botao svg { width: 22px; height: 22px; stroke-width: 2.4; }
+.barra-envio__botao--camera, .barra-envio__botao--enviar { background: var(--cor-primary); }
+.barra-envio__botao--microfone { background: var(--cor-primaryStrong); }
+.barra-envio--gravando .barra-envio__botao--microfone { box-shadow: 0 0 0 6px rgba(173, 93, 28, .2); }
+.barra-envio__gravacao { position: absolute; inset: 0; background: var(--cor-background); display: flex; align-items: center; justify-content: space-between; padding: 0 16px; animation: aparecer .2s; }
+.barra-envio__tempo { display: flex; align-items: center; gap: 8px; font: 700 13px/18px var(--fonte-texto); color: var(--cor-text); }
+.barra-envio__indicador { width: 10px; height: 10px; border-radius: 50%; background: var(--cor-primaryStrong); animation: respira 1s infinite; }
+.barra-envio__cancelar { font: 400 12px/18px var(--fonte-texto); color: var(--cor-muted); }
+.chat__espaco-inferior { height: 24px; }
+.camada--centro { display: grid; place-items: center; }
+.camada__centro { position: relative; z-index: 1; }
+.camada--centro.saindo { animation: sumir .22s ease forwards; }
+
+/* Mascotes da IA · 285×207 · círculo 195×177 em x 45, y 12 (Figma 872:6078) */
+.mascotes-ia { position: relative; display: block; width: 284px; height: 207px; }
+.mascotes-ia__circulo { position: absolute; left: 15.8%; top: 5.8%; width: 68.4%; height: 85.5%; border-radius: 50%; background: var(--cor-primarySoft); }
+.mascotes-ia__arte { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; }
+.icone-ia__arte.mascotes-ia { position: absolute; }
+.chat__imagem--mascotes .mascotes-ia { width: 284px; height: 207px; }
+.chat__imagem .mascotes-ia__arte { width: 100%; height: 100%; }
+.icone-ia .mascotes-ia { position: absolute; left: -6.5px; top: -1px; width: 35px; height: 25px; }
+.icone-ia--g .mascotes-ia { left: -13px; top: -2px; width: 70px; height: 50px; }

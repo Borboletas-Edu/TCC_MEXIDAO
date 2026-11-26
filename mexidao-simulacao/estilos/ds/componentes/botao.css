@@ -1,0 +1,12 @@
+/* Botão · 327×48 · r100 · Elms Sans ExtraBold 14/20 · variantes Principal, Secundário, Desabilitado, Verde */
+.botao { height: 48px; width: 100%; padding: 0 24px; border-radius: var(--raio-pilula); border: 1px solid transparent; display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: 800 14px/20px var(--fonte-titulo); white-space: nowrap; transition: transform .12s ease, background-color .2s, color .2s, border-color .2s; flex: none; }
+.botao:active:not(:disabled) { transform: scale(.97); }
+.botao--principal { background: var(--cor-primary); border-color: var(--cor-primary); color: var(--cor-surface); }
+.botao--secundario { background: var(--cor-surface); border-color: var(--cor-border); color: var(--cor-text); }
+.botao--desabilitado, .botao:disabled { background: var(--cor-border); border-color: var(--cor-border); color: var(--cor-muted); cursor: default; }
+.botao--verde { background: var(--cor-greenMedium); border-color: var(--cor-greenMedium); color: var(--cor-white); }
+.botao--compacto { height: 32px; width: auto; padding: 0 14px 0 12px; gap: 4px; font: 700 12px/16px var(--fonte-titulo); }
+.botao--mini { height: 24px; width: auto; padding: 0 10px 0 12px; gap: 6px; font: 800 12px/16px var(--fonte-titulo); background: var(--cor-green2); color: var(--cor-white); border: 0; }
+.botao__icone { width: 16px; height: 16px; flex: none; }
+.botao--compacto .botao__icone { width: 14px; height: 14px; }
+.botao--mini .botao__icone { width: 14px; height: 14px; stroke-width: 2.6; }

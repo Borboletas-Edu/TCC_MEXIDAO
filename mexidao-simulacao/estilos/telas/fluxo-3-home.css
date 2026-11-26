@@ -1,0 +1,34 @@
+/* Fluxo 3 · Home, busca, filtros e resultados */
+.home { padding-top: 14px; }
+.home__titulo { margin-top: 18px; }
+.home__apoio { margin-top: 11px; }
+.home .busca { margin-top: 11px; }
+/* Figma 872:5262: fundo verde de x 23 a 352, y 229 a 341 (327×112) · gato (camada 994:7867) passa do topo */
+.banner-home { position: relative; display: block; width: 327px; height: 112px; margin-top: 16px; border-radius: 16px; overflow: visible; flex: none; transition: transform .15s; }
+.banner-home:active { transform: scale(.98); }
+.banner-home__fundo { position: absolute; left: -4px; top: -23px; width: 338px; height: 148px; max-width: none; pointer-events: none; }
+.banner-home__gato { position: absolute; left: 9px; top: -23px; width: 338px; height: 148px; pointer-events: none; }
+.banner-home__titulo { position: absolute; left: 16px; top: 22px; z-index: 1; font: 700 20px/26px var(--fonte-titulo); color: var(--cor-white); }
+.banner-home__botao { position: absolute; left: 15px; top: 66px; z-index: 1; height: 24px; display: inline-flex; align-items: center; gap: 6px; padding: 0 8px 0 14px; border-radius: var(--raio-pilula); background: var(--cor-green2); font: 800 12px/20px var(--fonte-titulo); color: var(--cor-white); }
+.banner-home__botao svg { width: 12px; height: 12px; stroke-width: 2.6; }
+.titulo-secao { display: flex; align-items: center; justify-content: space-between; margin-top: 6px; height: 24px; }
+.home .titulo-secao { margin-top: 17px; } /* Figma 872:5279: título da seção em y 358 */
+.home .lista-cards { margin-top: 18px; }
+.titulo-secao .txt-acao { color: var(--cor-text); }
+.lista-cards { display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+
+/* Busca e filtro: sem cabeçalho, busca a 40 px da barra de status */
+.tela__corpo--busca { padding-top: 24px; } /* abaixo do cabeçalho "Buscar receitas": busca em y=110 */
+.lista-busca { display: flex; flex-direction: column; gap: 11px; margin-top: 17px; }
+.item-lista--busca { width: 100%; height: 29px; gap: 7px; padding: 0 4px; border-bottom: 1px solid var(--cor-border); text-align: left; justify-content: flex-start; }
+.item-lista--busca .item-lista__icone { width: 15px; height: 15px; color: var(--cor-text); }
+.item-lista--busca .item-lista__nome { font: 400 14px/21px var(--fonte-texto); }
+.tela__corpo--busca > .painel-filtros, [data-painel] { margin-top: 16px; }
+
+/* Listas com botão "Ver mais" sobre o fundo */
+.tela__corpo--lista { padding-bottom: 120px; }
+.tela__corpo--lista .lista-cards { margin-top: 0; }
+.lista-cards--resultados { margin-top: 26px !important; }
+.rodape-lista { position: absolute; left: 0; right: 0; bottom: 0; padding: 19px var(--margem) 43px; background: var(--cor-background); }
+
+.home__logo { display: block; width: 122px; height: 33px; object-fit: contain; margin-top: 4px; } /* Figma 1126:7458 · x 24 y 44 */

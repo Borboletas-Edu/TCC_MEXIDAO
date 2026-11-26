@@ -1,0 +1,10 @@
+/* Teclado do sistema (pt-BR) · 375×291 · fundo #d1d4da · teclas 32×42 r5 · Inter 22 */
+.teclado { background: #d1d4da; padding: 8px 3px 0; display: flex; flex-direction: column; gap: 11px; font-family: var(--fonte-sistema); animation: subir .28s var(--curva); flex: none; }
+.teclado__linha { display: flex; justify-content: center; gap: 6px; }
+.teclado__tecla { width: 32px; height: 42px; border-radius: 5px; background: var(--cor-white); box-shadow: 0 1px 0 #898a8d; font: 400 22px var(--fonte-sistema); color: #000; display: grid; place-items: center; }
+.teclado__tecla:active { background: #abb0ba; }
+.teclado__tecla--especial { width: 42px; background: #abb0ba; font-size: 18px; }
+.teclado__tecla--numeros { width: 42px; background: #abb0ba; font-size: 15px; }
+.teclado__tecla--espaco { width: 227px; font-size: 15px; }
+.teclado__tecla--buscar { width: 88px; background: #007aff; color: #fff; font-size: 15px; }
+.teclado__base { height: 71px; }

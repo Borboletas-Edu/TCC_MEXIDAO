@@ -1,0 +1,6 @@
+/* Link de texto · Nunito 13/20 · cor link  |  Link de ação · Elms Sans Bold 12/16 */
+.link-texto { display: block; width: 100%; text-align: center; font: 400 13px/20px var(--fonte-texto); color: var(--cor-link); }
+.link-acao { display: inline-flex; align-items: center; gap: 4px; font: 700 12px/16px var(--fonte-titulo); color: var(--cor-link); white-space: nowrap; }
+.link-acao--primaria { color: var(--cor-primary); }
+.link-acao--forte { font: 800 14px/20px var(--fonte-titulo); }
+.link-acao__icone { width: 12px; height: 12px; stroke-width: 2.6; }

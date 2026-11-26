@@ -1,0 +1,24 @@
+/* Postagem · cartão r16 padding 17 · autoria (avatar 40) · foto r12 · texto Nunito 13 · interações */
+.postagem { display: flex; flex-direction: column; gap: 12px; padding: 16px; background: var(--cor-surface); border: 1px solid var(--cor-border); border-radius: var(--raio-cartao); }
+.postagem__autoria { display: flex; align-items: center; gap: 12px; }
+.postagem__dados { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.postagem__nome { font: 700 13px/18px var(--fonte-texto); color: var(--cor-text); }
+.postagem__meta { font: 400 12px/18px var(--fonte-texto); color: var(--cor-muted); }
+.postagem__foto { display: block; width: 100%; height: 200px; border-radius: var(--raio-imagem); overflow: hidden; }
+.postagem__foto--baixa { height: 160px; }
+.postagem__foto img { width: 100%; height: 100%; object-fit: cover; }
+.postagem__titulo { font: 700 13px/18px var(--fonte-texto); color: var(--cor-text); }
+.postagem__texto { font: 400 13px/20px var(--fonte-texto); color: var(--cor-text); }
+.postagem__interacoes { display: flex; align-items: center; gap: 16px; }
+.interacao { display: inline-flex; align-items: center; gap: 6px; font: 400 12px/18px var(--fonte-texto); color: var(--cor-muted); }
+.interacao svg { width: 16px; height: 16px; color: var(--cor-primary); stroke-width: 2; transition: transform .2s; }
+.interacao--ativa svg { fill: var(--cor-primary); }
+.interacao--pulso svg { animation: pulso .45s cubic-bezier(.3, 1.8, .5, 1); }
+/* Comentários */
+.comentario-bloco { display: flex; flex-direction: column; gap: 10px; padding: 12px 10px 12px 7px; background: var(--cor-surface); border-radius: 10px; animation: aparecer .3s; }
+.comentario { display: flex; gap: 10px; }
+.comentario--resposta { padding-left: 29px; }
+.comentario__texto { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.comentario__topo { display: flex; align-items: center; gap: 6px; font: 400 12px/18px var(--fonte-texto); color: var(--cor-muted); flex-wrap: wrap; }
+.comentario__nome { font-weight: 700; color: var(--cor-text); font-size: 13px; }
+.comentario__mensagem { font: 400 13px/20px var(--fonte-texto); color: var(--cor-text); }

@@ -1,0 +1,48 @@
+/* Painel inferior · fundo surface · topo arredondado 24 · sobreposição text a 40% */
+.camada { position: absolute; inset: 0; z-index: 20; }
+.sobreposicao { position: absolute; inset: 0; background: var(--cor-overlay); animation: aparecer .25s ease; }
+.painel-inferior { position: absolute; left: 0; right: 0; bottom: 0; max-height: calc(100% - 60px); display: flex; flex-direction: column; background: var(--cor-surface); border-radius: var(--raio-painel) var(--raio-painel) 0 0; animation: subir .32s var(--curva); }
+.painel-inferior__topo { flex: none; position: relative; height: 24px; touch-action: none; cursor: grab; }
+.painel-inferior__alca { display: none;  position: absolute; left: 50%; top: 10px; width: 36px; height: 4px; margin-left: -18px; border-radius: 2px; background: var(--cor-border); }
+.painel-inferior__fechar { position: absolute; right: 28px; top: 20px; width: 24px; height: 24px; display: grid; place-items: center; color: var(--cor-text); z-index: 2; }
+.painel-inferior__fechar svg { width: 16px; height: 16px; stroke-width: 1.9; }
+.painel-inferior__conteudo { flex: 1; min-height: 0; overflow-y: auto; padding: 0 var(--margem) 40px; scrollbar-width: thin; scrollbar-color: var(--cor-border) transparent; }
+.painel-inferior__conteudo::-webkit-scrollbar { width: 4px; }
+.painel-inferior__conteudo::-webkit-scrollbar-thumb { background: var(--cor-border); border-radius: 4px; }
+.painel-inferior__titulo { font: 800 17px/22px var(--fonte-titulo); color: var(--cor-text); padding-right: 32px; }
+.painel-inferior__rodape { flex: none; padding: 16px var(--margem) 40px; }
+.camada.saindo .sobreposicao { animation: sumir .22s ease forwards; }
+.camada.saindo .painel-inferior { animation: descer .25s ease forwards; }
+.icone-circular { width: 56px; height: 56px; border-radius: 50%; background: var(--cor-surfaceAlt); color: var(--cor-primary); display: grid; place-items: center; margin: 0 auto; flex: none; }
+.icone-circular svg { width: 24px; height: 24px; }
+.icone-circular--perigo { color: var(--cor-link); }
+.icone-circular--p { width: 32px; height: 32px; margin: 0; }
+.icone-circular--p svg { width: 16px; height: 16px; }
+.icone-circular--m { width: 36px; height: 36px; margin: 0; }
+.icone-circular--m svg { width: 18px; height: 18px; }
+.icone-circular--g { width: 44px; height: 44px; margin: 0; color: var(--cor-text); }
+.icone-circular--g svg { width: 20px; height: 20px; }
+.icone-circular--verde { background: var(--cor-greenSoft); color: var(--cor-greenStrong); }
+.icone-circular--amarelo { background: var(--cor-timeMedium); }
+/* Painel com busca (restrições): altura fixa do Figma (492), campo de busca 48 no fundo background */
+.painel-inferior--fixo { height: 492px; transition: bottom .3s var(--curva); bottom: 0; }
+.painel-inferior--fixo .painel-inferior__conteudo { padding-top: 16px; }
+.painel-inferior--fixo .painel-inferior__rodape { padding: 16px var(--margem) 48px; }
+.painel-inferior--teclado { bottom: 170px; }
+.painel-inferior--teclado .painel-inferior__rodape { padding-bottom: 48px; }
+.camada__teclado { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; animation: subir .3s var(--curva); }
+.busca--painel { height: 48px; background: var(--cor-background); border: 0; padding: 0 20px; gap: 6px; }
+.busca--painel .busca__lupa { width: 14px; height: 14px; }
+.busca--painel .busca__valor { font-size: 14px; line-height: 21px; }
+/* Variante com alça visível (confirmações: limpar cache, sair) · alça 40×4 a 12 do topo */
+.painel-inferior--com-alca .painel-inferior__topo { height: 32px; }
+.painel-inferior--com-alca .painel-inferior__alca { display: block; top: 12px; width: 40px; margin-left: -20px; border-radius: 100px; }
+/* Confirmação centralizada: ícone 56 · título 26 · texto · ações */
+.confirmacao { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; }
+.confirmacao .icone-circular svg { width: 26px; height: 26px; }
+.confirmacao__acoes { display: flex; flex-direction: column; gap: 10px; width: 100%; }
+
+/* Painel "Nível na cozinha" (Figma 872:5982): painel 420 · título em 24 · opções 48 (gap 8) a 72 · botão a 28 das opções · 56 abaixo */
+.painel-inferior--nivel .painel-inferior__conteudo { padding-bottom: 0; overflow: visible; }
+.painel-inferior--nivel .grupo-opcoes { margin-top: 26px; }
+.painel-inferior--nivel .painel-inferior__rodape { padding: 28px var(--margem) 56px; }

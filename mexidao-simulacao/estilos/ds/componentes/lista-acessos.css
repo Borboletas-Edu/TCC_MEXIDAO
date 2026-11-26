@@ -1,0 +1,12 @@
+/* Lista de acessos (Configurações) · cartão r16 · linhas 43 · ícone 20 primário · seta 16 · divisória border */
+.titulo-grupo { font: 700 12px/18px var(--fonte-texto); color: var(--cor-muted); margin: 8px 0 8px; }
+.titulo-grupo:first-child { margin-top: 0; }
+.lista { background: var(--cor-surface); border: 1px solid var(--cor-border); border-radius: var(--raio-cartao); overflow: hidden; }
+.lista > * + * { border-top: 1px solid var(--cor-border); }
+.acesso { width: 100%; height: 43px; display: flex; align-items: center; gap: 12px; padding: 0 14px; font: 400 14px/21px var(--fonte-texto); color: var(--cor-text); text-align: left; transition: background-color .15s; }
+.acesso:active { background: var(--cor-surfaceAlt); }
+.acesso--alto { height: 45px; }
+.acesso__icone { width: 20px; height: 20px; color: var(--cor-primary); flex: none; stroke-width: 2; }
+.acesso__seta { width: 16px; height: 16px; margin-left: auto; color: var(--cor-text); flex: none; }
+.acesso--perigo { color: var(--cor-link); }
+.acesso--perigo .acesso__icone { color: var(--cor-link); }

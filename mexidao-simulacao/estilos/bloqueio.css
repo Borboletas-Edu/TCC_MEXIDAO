@@ -1,0 +1,16 @@
+/* Tela "Bloqueado para visualização em celulares" (celular e tablet) */
+.bloqueio { display: none; }
+html.so-pc, html.so-pc body { height: 100%; overflow: auto; }
+html.so-pc body { display: block; background: var(--cor-background); }
+html.so-pc .palco, html.so-pc .painel, html.so-pc .ds-doc__topo, html.so-pc .ds-doc__menu, html.so-pc #ds { display: none !important; }
+html.so-pc .bloqueio { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; min-height: 100%; padding: 40px 24px; text-align: center; color: var(--cor-text); font-family: var(--fonte-texto); }
+.bloqueio__icone { position: relative; width: 96px; height: 96px; border-radius: 50%; background: var(--cor-surface); border: 1px solid var(--cor-border); color: var(--cor-text); display: grid; place-items: center; margin-bottom: 8px; }
+.bloqueio__icone > svg { width: 52px; height: 52px; }
+.bloqueio__cadeado { position: absolute; right: 10px; bottom: 10px; width: 34px; height: 34px; border-radius: 50%; background: var(--cor-primary); color: var(--cor-white); border: 3px solid var(--cor-background); display: grid; place-items: center; }
+.bloqueio__cadeado svg { width: 17px; height: 17px; }
+.bloqueio__titulo { max-width: 340px; font: 800 26px/32px var(--fonte-titulo); }
+.bloqueio__texto { max-width: 340px; font: 700 15px/22px var(--fonte-texto); color: var(--cor-text); }
+.bloqueio__apoio { max-width: 340px; margin-top: 8px; font: 400 13px/20px var(--fonte-texto); color: var(--cor-muted); }
+.bloqueio__link { max-width: 327px; width: 100%; padding: 12px 16px; border-radius: 16px; background: var(--cor-surface); border: 1px solid var(--cor-border); font: 700 13px/18px var(--fonte-texto); color: var(--cor-text); word-break: break-all; }
+.bloqueio .botao { max-width: 327px; }
+.bloqueio__copiado { min-height: 18px; font: 700 13px/18px var(--fonte-texto); color: var(--cor-greenStrong); }

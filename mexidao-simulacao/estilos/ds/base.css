@@ -1,0 +1,48 @@
+/* DS · Base — reset, tipografia (estilos de texto do Figma) e utilitários de layout. */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+[hidden] { display: none !important; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; text-align: inherit; }
+input, textarea { font: inherit; color: inherit; border: 0; outline: 0; background: transparent; min-width: 0; }
+img, video, svg { display: block; max-width: 100%; }
+:focus { outline: none; }
+:focus-visible { outline: 2px solid var(--cor-primary); outline-offset: 2px; }
+
+/* Estilos de texto — "Caderno de cozinha/…" */
+.txt-titulo     { font: 800 30px/36px var(--fonte-titulo); color: var(--cor-text); }
+.txt-secao      { font: 800 26px/32px var(--fonte-titulo); color: var(--cor-text); }
+.txt-cabecalho  { font: 800 17px/22px var(--fonte-titulo); color: var(--cor-text); }
+.txt-acao       { font: 800 14px/20px var(--fonte-titulo); }
+.txt-acao-p     { font: 700 12px/16px var(--fonte-titulo); }
+.txt-corpo      { font: 400 14px/21px var(--fonte-texto); color: var(--cor-text); }
+.txt-apoio      { font: 400 13px/20px var(--fonte-texto); color: var(--cor-muted); }
+.txt-rotulo     { font: 700 13px/18px var(--fonte-texto); color: var(--cor-text); }
+.txt-rotulo-p   { font: 700 12px/18px var(--fonte-texto); color: var(--cor-text); }
+.txt-pequeno    { font: 400 12px/18px var(--fonte-texto); color: var(--cor-muted); }
+.txt-sobretitulo{ font: 800 11px/16px var(--fonte-texto); color: var(--cor-muted); letter-spacing: .2px; }
+.txt-tag        { font: 800 10px/14px var(--fonte-texto); }
+
+/* Modificadores de cor de texto */
+.cor-texto { color: var(--cor-text); }
+.cor-apagada { color: var(--cor-muted); }
+.cor-primaria { color: var(--cor-primary); }
+.cor-link { color: var(--cor-link); }
+.cor-verde { color: var(--cor-greenStrong); }
+.cor-branca { color: var(--cor-white); }
+.centro { text-align: center; }
+
+/* Utilitários de layout (só espaçamento e alinhamento) */
+.pilha { display: flex; flex-direction: column; }
+.linha { display: flex; align-items: center; }
+.linha--topo { align-items: flex-start; }
+.linha--entre { justify-content: space-between; }
+.flex1 { flex: 1; min-width: 0; }
+.g2{gap:2px}.g4{gap:4px}.g6{gap:6px}.g8{gap:8px}.g10{gap:10px}.g12{gap:12px}.g16{gap:16px}.g20{gap:20px}.g24{gap:24px}
+.mt4{margin-top:4px}.mt8{margin-top:8px}.mt12{margin-top:12px}.mt16{margin-top:16px}.mt20{margin-top:20px}.mt24{margin-top:24px}.mt32{margin-top:32px}.mt48{margin-top:48px}
+.rolagem-x { overflow-x: auto; scrollbar-width: none; }
+.rolagem-x::-webkit-scrollbar { display: none; }
+/* Campos de texto não mostram anel de foco: quem indica o foco é o contêiner (borda primária) */
+input:focus-visible, textarea:focus-visible { outline: none; }
+
+/* Elms Sans: a versão da web é mais estreita que a usada no Figma; este espaçamento reproduz a largura dos textos do Figma */
+.aba,.adicionar-foto__exemplo,.adicionar-foto__trocar,.avatar--72,.balao-ia__ok,.banner-home__botao,.banner-home__titulo,.bloqueio__titulo,.botao,.botao--compacto,.botao--mini,.concluida__pontos,.ds-doc__cab h2,.ds-doc__topo h1,.ds-doc__voltar,.etapa-metodo__nome,.faixa-info,.link-acao,.link-acao--forte,.numeros-perfil__item b,.painel-inferior__titulo,.painel__onde b,.painel__topo strong,.pessoa-linha__botao,.timer,.txt-acao,.txt-acao-p,.txt-cabecalho,.txt-secao,.txt-titulo { letter-spacing: .05em; word-spacing: .1em; }
+.txt-titulo, .txt-secao { letter-spacing: .03em; word-spacing: .08em; }

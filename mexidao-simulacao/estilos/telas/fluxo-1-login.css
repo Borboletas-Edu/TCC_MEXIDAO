@@ -1,0 +1,16 @@
+/* Fluxos 0 e 1 · Splash, Tela Inicial, Login, Cadastro e Recuperar senha (medidas dos frames do Figma) */
+.splash { position: relative; flex: 1; }
+.splash__logo { position: absolute; left: 23px; top: 339px; width: 326px; height: 89px; object-fit: contain; animation: respira 2.2s ease-in-out infinite; }
+.splash__carregando { position: absolute; left: 24px; right: 24px; top: 744px; text-align: center; }
+
+.inicial { padding-top: 301px; }
+.inicial__animacao { position: absolute; left: 32px; top: 18px; width: 319px; height: 319px; object-fit: cover; pointer-events: none; }
+.inicial h1 { position: relative; }
+.inicial__rodape { gap: 32px; }
+.inicial__acesso { display: flex; flex-direction: column; gap: 12px; }
+
+/* Formulários: Introdução + campos. Cadastro = 16 entre blocos; Login e Recuperar = 24 */
+.formulario { display: flex; flex-direction: column; gap: 16px; }
+.formulario--login, .formulario--recuperar, .formulario--largo { gap: 24px; }
+.formulario--dados { gap: 16px; }
+.formulario--dados .campo--restricao { margin-top: 8px; gap: 16px; }

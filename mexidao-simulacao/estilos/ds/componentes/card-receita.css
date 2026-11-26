@@ -1,0 +1,6 @@
+/* Card de receita · 327 · padding 8 · gap 12 · r16 · foto 134×89 r12 · título Nunito Bold 13/18 · tags gap 6 */
+.card-receita { width: 100%; display: flex; align-items: center; gap: 12px; padding: 8px; background: var(--cor-surface); border: 1px solid var(--cor-border); border-radius: var(--raio-cartao); text-align: left; transition: transform .12s; }
+.card-receita:active { transform: scale(.98); }
+.card-receita__foto { width: 134px; height: 89px; border-radius: var(--raio-imagem); object-fit: cover; flex: none; background: var(--cor-surfaceAlt); }
+.card-receita__info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; align-self: center; } /* Figma: informações centralizadas na altura do card */
+.card-receita__titulo { font: 700 13px/18px var(--fonte-texto); color: var(--cor-text); }
