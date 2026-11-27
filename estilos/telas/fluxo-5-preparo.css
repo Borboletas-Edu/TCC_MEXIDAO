@@ -21,7 +21,7 @@
 /* Receita concluída */
 .concluida { padding-top: 70px; align-items: stretch; }
 .concluida__mascotes { width: 300px; height: 191px; object-fit: contain; margin-left: 30px; align-self: flex-start; } /* Figma: mascotes de x 54 a 353, y 114 a 305 */
-.concluida__animacao, .atividade-concluida__animacao { display: block; width: 375px; height: 226px; object-fit: contain; object-position: 50% 50%; margin: -16px -24px 0; flex: none; transform: none; -webkit-mask-image: none; mask-image: none; } /* mesmo tamanho e centralização nas duas telas de conclusão (Figma 872:5939: x 0 a 375, 226 de altura) */
+.concluida__animacao, .atividade-concluida__animacao { display: block; width: 375px; max-width: none; height: 226px; object-fit: contain; object-position: 50% 50%; margin: -16px -24px 0; flex: none; transform: none; -webkit-mask-image: none; mask-image: none; } /* mesmo tamanho e centralização nas duas telas de conclusão (Figma 872:5939: x 0 a 375, 226 de altura) */
 .concluida__titulo { margin-top: 39px; }
 .concluida__subtitulo { margin-top: -1px; }
 .concluida__cartao { margin-top: 43px; background: var(--cor-white); border-radius: 10px; padding: 16px 9px 17px 9px; display: flex; flex-direction: column; gap: 5px; border-bottom: 0; position: relative; }

@@ -54,11 +54,11 @@ export const onboarding = {
     botao: 'Conectar rede selecionada', pular: 'Agora não. Pular esta etapa',
   },
   autorizar: {
-    vetor: 'vetor aqui', faixa: '{rede} · autorização externa', titulo: 'Permitir conexão?', texto: 'O Mexidão está solicitando acesso à conta da rede selecionada.',
+    vetor: 'vetor aqui', faixa: '{rede} · autorização externa', titulo: 'Permitir conexão?', texto: 'Mexidão está solicitando acesso à conta da rede selecionada.',
     cartaoTitulo: 'Revisar permissões', cartaoTexto: 'As permissões solicitadas serão exibidas pelo serviço escolhido antes da confirmação.',
     autorizar: 'Autorizar conexão', naoAutorizar: 'Não autorizar', cancelar: 'Cancelar e voltar',
   },
-  conectado: { vetor: 'vetor aqui', titulo: 'Tudo conectado!', texto: 'A autorização foi concluída. Você já pode continuar para o app.', cartaoTitulo: '{rede} conectado', cartaoTexto: 'Sua conta foi conectada ao {rede} com sucesso.', botao: 'Continuar para o início' },
+  conectado: { vetor: 'vetor aqui', titulo: 'Tudo conectado!', texto: 'A autorização foi concluída. Agora suas receitas salvas são recomendas com base nos seus gostos!', cartaoTitulo: '{rede} conectado', cartaoTexto: 'Sua conta foi conectada ao {rede} com sucesso.', botao: 'Continuar para o início' },
 };
 
 // Receitas de exemplo. Os atributos alimentam a busca e os filtros.

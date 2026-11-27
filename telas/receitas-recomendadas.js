@@ -8,5 +8,5 @@ export default {
   id: 'receitas-recomendadas', nome: 'Receitas recomendadas', fluxo: 3, figma: '872:6231',
   render: () => `${topo(home.recomendadas)}
     ${corpo(`<div class="lista-cards">${home.listaRecomendadas.map((id) => cardReceita(R(id), 'data-ir="detalhes"')).join('')}</div>`, 'tela__corpo--lista')}
-    ${rodape(botao(home.verMais, { tipo: 'secundario', attrs: 'data-toast="Mais receitas em breve"' }), { classe: 'rodape-lista' })}`,
+`,
 };

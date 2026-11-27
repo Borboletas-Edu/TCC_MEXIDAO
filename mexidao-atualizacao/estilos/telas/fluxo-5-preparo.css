@@ -1,0 +1,50 @@
+/* Fluxo 5 · Preparo, conclusão, "Como ficou?", chat com IA e vídeo em tela cheia */
+.preparo { padding-top: 35px; }
+.preparo__receita { color: var(--cor-text); }
+.preparo .progresso-etapas { margin-top: 11px; flex: none; }
+.preparo__etapa { margin-top: 32px; display: flex; flex-direction: column; }
+.preparo__titulo { margin-top: 6px; }
+.preparo__instrucoes { margin-top: 20px; }
+.preparo__timer { margin-top: 23px; }
+.preparo__rodape { gap: 14px; padding-bottom: 37px; }
+.preparo__proxima { margin-bottom: 34px; padding-left: 4px; }
+.cabecalho .ajuda-ia { margin-right: -5px; }
+
+/* Balão da IA (1ª etapa) */
+.balao-ia { position: absolute; left: 85px; top: 96px; width: 250px; z-index: 8; display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 14px; border-radius: 16px; background: var(--cor-surface); box-shadow: 0 10px 28px rgba(58, 64, 51, .16); animation: balao-entra .4s cubic-bezier(.2, .9, .3, 1.2) both; transform-origin: 90% 0; }
+.balao-ia::before { content: ""; position: absolute; right: 30px; top: -8px; width: 16px; height: 16px; background: var(--cor-surface); transform: rotate(45deg); border-radius: 3px; }
+.balao-ia .txt-apoio { line-height: 20px; }
+.balao-ia__ok { align-self: flex-start; margin-top: 4px; font: 700 12px/16px var(--fonte-titulo); color: var(--cor-primary); }
+.balao-ia.saindo { animation: sumir .25s ease forwards; }
+@keyframes balao-entra { from { opacity: 0; transform: scale(.85) translateY(-6px); } to { opacity: 1; transform: none; } }
+
+/* Receita concluída */
+.concluida { padding-top: 70px; align-items: stretch; }
+.concluida__mascotes { width: 300px; height: 191px; object-fit: contain; margin-left: 30px; align-self: flex-start; } /* Figma: mascotes de x 54 a 353, y 114 a 305 */
+.concluida__animacao, .atividade-concluida__animacao { display: block; width: 375px; max-width: none; height: 226px; object-fit: contain; object-position: 50% 50%; margin: -16px -24px 0; flex: none; transform: none; -webkit-mask-image: none; mask-image: none; } /* mesmo tamanho e centralização nas duas telas de conclusão (Figma 872:5939: x 0 a 375, 226 de altura) */
+.concluida__titulo { margin-top: 39px; }
+.concluida__subtitulo { margin-top: -1px; }
+.concluida__cartao { margin-top: 43px; background: var(--cor-white); border-radius: 10px; padding: 16px 9px 17px 9px; display: flex; flex-direction: column; gap: 5px; border-bottom: 0; position: relative; }
+.concluida__cartao::after { content: ""; position: absolute; left: 4px; right: 4px; bottom: 18px; border-top: 1px dashed var(--cor-green); }
+.concluida__cartao .barra-progresso { margin-right: 3px; }
+.concluida__pontos { margin-top: 9px; font: 700 25px/32px var(--fonte-titulo); color: var(--cor-text); }
+.concluida__cartao .linha { padding: 0 1px 22px; }
+.concluida ~ .tela__rodape { gap: 26px; }
+
+/* Como ficou? */
+.como-ficou { padding-top: 14px; }
+.como-ficou__receita { margin-top: 16px; font-size: 13px; }
+.como-ficou__estrelas { margin: 18px 0 0 3px; }
+.como-ficou__estrelas .estrela { width: 26px; height: 24px; }
+.como-ficou__nota { margin: 20px 0 0 3px; }
+.como-ficou__usuario { display: flex; align-items: center; gap: 12px; margin-top: 16px; }
+.como-ficou__usuario .avatar { background: var(--cor-surfaceAlt); }
+.como-ficou .adicionar-foto { margin-top: 16px; }
+.como-ficou > .campo { margin-top: 20px; }
+.como-ficou .campo__entrada--multi { min-height: 94px; }
+
+/* Chat com IA */
+.tela--chat .cabecalho { border-bottom: 0; }
+
+/* Vídeo em tela cheia */
+.tela--video { background: #000; }
