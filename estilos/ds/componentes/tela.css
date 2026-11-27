@@ -18,6 +18,7 @@
 .tela--fundo-b { background-image: url("../../../midia/fundos/folhas-b.jpg"); }
 .tela--fundo-c { background-image: url("../../../midia/fundos/folhas-c.jpg"); }
 
-/* Folhas do fundo por cima de vídeos/ilustrações opacas (o fundo do vídeo não cobre as folhas) */
-.fundo-frente { position: absolute; left: 0; top: 0; width: 375px; height: 812px; pointer-events: none; z-index: 3; background-size: 375px 812px; background-repeat: no-repeat; }
+/* Folhas do fundo por cima de vídeos/ilustrações opacas (o fundo do vídeo não cobre as folhas),
+   mas abaixo do rodapé de ações (z-index 2), para não cobrir os botões */
+.fundo-frente { position: absolute; left: 0; top: 0; width: 375px; height: 812px; pointer-events: none; z-index: 1; background-size: 375px 812px; background-repeat: no-repeat; }
 .fundo-frente--b { background-image: url("../../../midia/fundos/folhas-b-frente.png"); }

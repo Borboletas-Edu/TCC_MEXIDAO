@@ -1,4 +1,4 @@
-// DS · Vídeo com elemento nativo <video> (som, tempo, tela cheia) e controles do DS:
+// DS · Vídeo (na simulação, sempre imagem estática da capa, sem som e sem reprodução) com controles do DS:
 // Tocar e pausar · Controle do vídeo (Som / Sem som / Tela cheia / Sair) · Linha do tempo · Player (modal) · Player tela cheia.
 // Se um vídeo não tiver arquivo em dados/midia.js, o poster é exibido e a reprodução é simulada.
 // Vídeos com "youtube" (e usarYoutube = true) usam o player oficial do YouTube, com os controles dele.
@@ -7,9 +7,8 @@ import { dadosVideo } from './midia.js';
 import { usarYoutube } from '../dados/midia.js';
 import { esc, mmss, cls } from './util.js';
 
-const fonte = (v) => v.arquivo
-  ? `<video class="video__midia" data-midia-video src="${v.arquivo}" poster="${v.poster}" playsinline preload="metadata"></video>`
-  : `<img class="video__midia" data-midia-video src="${v.poster}" alt="">`;
+// Simulação: todo vídeo é só a imagem de capa (sem <video>, sem som, nada toca)
+const fonte = (v) => `<img class="video__midia" data-midia-video src="${v.poster}" alt="" draggable="false">`;
 // YouTube (player oficial incorporado, começando e terminando no trecho escolhido)
 const doYoutube = (v) => usarYoutube && v.youtube;
 const urlYoutube = (y, auto) => `https://www.youtube-nocookie.com/embed/${y.id}?start=${y.inicio}&end=${y.fim}&rel=0&playsinline=1&modestbranding=1${auto ? '&autoplay=1' : ''}`;
@@ -67,9 +66,9 @@ export function playerCheio(ref) {
 function criarFonte(el, v, ctx) {
   if (el.tagName === 'VIDEO') return el;
   const f = { paused: true, currentTime: 0, duration: v.duracao, muted: false, ouvintes: {}, addEventListener(n, fn) { (this.ouvintes[n] ||= []).push(fn); }, emitir(n) { (this.ouvintes[n] || []).forEach((fn) => fn()); } };
-  f.play = () => { f.paused = false; f.emitir('play'); return Promise.resolve(); };
-  f.pause = () => { f.paused = true; f.emitir('pause'); };
-  ctx.intervalo(() => { if (f.paused) return; f.currentTime += .25; if (f.currentTime >= f.duration) { f.currentTime = 0; f.pause(); f.emitir('ended'); } f.emitir('timeupdate'); }, 250);
+  // Imagem estática: tocar não faz nada e a linha do tempo fica parada em 0:00
+  f.play = () => Promise.resolve();
+  f.pause = () => {};
   return f;
 }
 
@@ -100,7 +99,6 @@ export function ligarVideos(raiz, ctx, opcoes = {}) {
     box.querySelector('[data-tela-cheia]')?.addEventListener('click', (e) => { e.stopPropagation(); const t = m.currentTime; m.pause(); opcoes.aoTelaCheia?.(box.dataset.video, t); });
     box.querySelector('[data-sair-cheia]')?.addEventListener('click', () => { m.pause(); opcoes.aoSairCheia?.(); });
     const trilho = box.querySelector('[data-trilho]');
-    trilho?.addEventListener('click', (e) => { const r = trilho.getBoundingClientRect(); m.currentTime = ((e.clientX - r.left) / r.width) * duracao(); desenhar(); });
     estado();
     if ('autoplay' in box.dataset) setTimeout(() => m.play().catch(() => {}), 150);
     box._midia = m;
